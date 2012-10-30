@@ -1,0 +1,49 @@
+[User]
+	name = Jerry Yang
+	email = hy0kle@gmail.com
+[merge]
+    summary = true
+    tool = vimdiff
+[diff]
+    renames = copy
+[color]
+     diff = auto
+     status = true
+     branch = auto
+     interactive = auto;
+     ui = auto;
+ [status]
+     submodulesummary = -1
+ [format]
+     numbered = auto
+ [alias]
+    sed  = !git ls-files --stage | grep ^100 | awk '{print $4}' | xargs sed $@
+	who = shortlog -n -s --no-merges
+    stat = status
+
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    l  = log --pretty=oneline --abbrev-commit --graph --decorate
+    g  = grep -n --color -E
+    ci = commit
+    co = checkout
+    st = status
+    bv = branch -v
+    bm = branch -m
+    bd = branch -d
+    cb = checkout -b
+    rt = reset --hard
+    cp = cherry-pick -x
+    nb = checkout -b
+    mg = merge
+    df = diff
+
+    # 'git add -u' 只包含刪除的檔案,不包含新增檔案
+    # 'git add .' 包含修改和新增的檔案,但是不包含刪除
+    # 'git addall' 通通加到 staging
+    au = add -u
+    awd= add .
+    aa = !sh -c 'git add . && git add -u'
+
+    unstage  = reset HEAD
+    uncommit = reset --soft HEAD^
+    amend    = commit --amend
