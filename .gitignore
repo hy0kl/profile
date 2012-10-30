@@ -3,4 +3,10 @@ LICENSE.txt
 README.txt
 demos/
 extras/documentation
-
+*.o
+*~
+*.swp
+*.swo
+*.dSYM
+a.out
+tags
