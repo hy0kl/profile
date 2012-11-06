@@ -50,3 +50,4 @@ autocmd BufReadPost *
 
 autocmd BufNewFile *.c 0r ~/.vim/template/cconfig.c
 autocmd BufNewFile *.php 0r ~/.vim/template/phpconfig.php
+autocmd BufNewFile *.sh 0r ~/.vim/template/shconfig.sh
