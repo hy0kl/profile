@@ -41,12 +41,10 @@ function get_work_pids()
 
 start() {
     echo $"Starting $desc ($prog): "
-    nohup $prog -d -p $PORT -u $USER -c $MAXCONN -m $CACHESIZE $OPTIONS &
+    $prog -d -p $PORT -u $USER -c $MAXCONN -m $CACHESIZE $OPTIONS
     RETVAL=$?
     echo
     [ $RETVAL -eq 0 ] && touch /var/tmp/lock-memcached
-    sleep 1
-    rm nohup.out
     return $RETVAL
 }
 
