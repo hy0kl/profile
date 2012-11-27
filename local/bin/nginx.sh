@@ -17,28 +17,46 @@
 [ "$NETWORKING" = "no" ] && exit 0
  
 nginx="$HOME/nginx/sbin/nginx"
-prog=$(basename $nginx)
+prog=$nginx
  
 NGINX_CONF_FILE="$HOME/nginx/conf/nginx.conf"
  
 #[ -f /etc/sysconfig/nginx ] && . /etc/sysconfig/nginx
- 
-lockfile=/var/tmp/lock-nginx
+
+# global functions {
+work_pids=""
+function get_work_pids()
+{
+    work_pids=$(ps aux | grep  "$prog"| grep -v grep | awk '{print $2}' | xargs)
+}
  
 start() {
     [ -x $nginx ] || exit 5
     [ -f $NGINX_CONF_FILE ] || exit 6
-    echo -n $"Starting $prog: "
+
+    get_work_pids
+    if [ "$work_pids" == "" ]; then
+        echo "It is no process working, so let it start to work."
+    else
+        echo "It has process working now, please stop it before start it."
+        exit -1
+    fi
+
     $nginx -c $NGINX_CONF_FILE
     retval=$?
-    echo
-    [ $retval -eq 0 ] && touch $lockfile
     return $retval
 }
  
 stop() {
-    echo -n $"Stopping $prog: "
-    killproc $prog -QUIT
+    get_work_pids
+    kill_pids=$work_pids
+    #no process need to quit
+    if [ "$kill_pids" == "" ]; then
+        echo "No process need to quit..."
+        exit 0
+    fi
+
+    $nginx -s quit
     retval=$?
     echo
     [ $retval -eq 0 ] && rm -f $lockfile
@@ -55,7 +73,7 @@ restart() {
 reload() {
     configtest || return $?
     echo -n $"Reloading $prog: "
-    killproc $nginx -HUP
+    $nginx -s reload
     RETVAL=$?
     echo
 }
