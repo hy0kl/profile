@@ -9,4 +9,7 @@ $ ./configure --with-png-dir=/opt/local/ --with-freetype-dir=/opt/local/ --with-
 3. 更新 port
 sudo port selfupdate
 
+4. mysql
+/usr/local/mysql/bin/mysqld --basedir=/usr/local/mysql --datadir=/usr/local/mysql/data --plugin-dir=/usr/local/mysql/lib/plugin --user=mysql --log-error=/usr/local/mysql/data/MacBook.local.err --pid-file=/usr/local/mysql/data/MacBook.local.pid
+/bin/sh /usr/local/mysql/bin/mysqld_safe --datadir=/usr/local/mysql/data --pid-file=/usr/local/mysql/data/MacBook.local.pid
 
