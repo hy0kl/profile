@@ -139,6 +139,8 @@ magenta=$'\[\e[1;35m\]'
  normal=$'\[\e[m\]'
 
 # for gcc
+# 这块的覆盖技术没有用好
+# 应该把用户的放到最前面
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/local/lib:/usr/local/lib
 C_INCLUDE_PATH=$C_INCLUDE_PATH:/usr/local/include:$HOME/local/include:/Developer/SDKs/MacOSX10.5.sdk/usr/include
 export C_INCLUDE_PATH

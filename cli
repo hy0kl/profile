@@ -2,6 +2,8 @@
 Nov 25 2012
 $ ./configure --prefix=/Users/hy0kl/php --enable-cli --with-libxml-dir=/usr --with-kerberos=/usr --with-zlib=/usr --enable-bcmath --with-bz2=/usr --enable-calendar --with-curl=/usr --enable-exif --enable-ftp --with-ldap=/usr --with-ldap-sasl=/usr --enable-mbstring --enable-mbregex --with-mysql=mysqlnd --with-mysqli=mysqlnd --with-pdo-mysql=mysqlnd --with-mysql-sock=/var/mysql/mysql.sock --without-pear --with-iodbc=/usr --enable-shmop --disable-soap --enable-sockets --enable-sysvmsg --enable-sysvsem --enable-sysvshm --enable-wddx --with-xmlrpc --with-iconv-dir=/usr --with-xsl=/usr --enable-zip --with-pcre-regex=/opt/local --enable-fpm
 
+$ ./configure --prefix=/Users/hy0kl/php --enable-cli --with-libxml-dir=/usr --with-kerberos=/usr --with-zlib=/usr --enable-bcmath --with-bz2=/usr --enable-calendar --with-curl=/usr --enable-exif --enable-ftp --with-ldap=/usr --with-ldap-sasl=/usr --enable-mbstring --enable-mbregex --with-mysql=mysqlnd --with-mysqli=mysqlnd --with-pdo-mysql=mysqlnd --with-mysql-sock=/var/mysql/mysql.sock --without-pear --with-iodbc=/usr --enable-shmop --disable-soap --enable-sockets --enable-sysvmsg --enable-sysvsem --enable-sysvshm --enable-wddx --with-xmlrpc --with-iconv-dir=/opt/local --with-xsl=/usr --enable-zip --with-pcre-regex=/opt/local --enable-fpm
+
 2. php gd configure
 2012.11.27
 $ ./configure --with-png-dir=/opt/local/ --with-freetype-dir=/opt/local/ --with-jpeg-dir=/opt/local/ --with-fontconfig=/opt/local/ --with-vpx-dir=/opt/local/ --with-php-config=/Users/hy0kl/php/bin/php-config
@@ -13,3 +15,5 @@ sudo port selfupdate
 /usr/local/mysql/bin/mysqld --basedir=/usr/local/mysql --datadir=/usr/local/mysql/data --plugin-dir=/usr/local/mysql/lib/plugin --user=mysql --log-error=/usr/local/mysql/data/MacBook.local.err --pid-file=/usr/local/mysql/data/MacBook.local.pid
 /bin/sh /usr/local/mysql/bin/mysqld_safe --datadir=/usr/local/mysql/data --pid-file=/usr/local/mysql/data/MacBook.local.pid
 
+5. php memcache ext
+$ ./configure --with-php-config=/Users/hy0kl/php/bin/php-config

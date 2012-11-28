@@ -19,7 +19,7 @@ set fdm=indent
 "set completeopt=longest
 ab COMMENT_F /** */
 ab JAVASCRIPT <script type="text/javascript" src=""></script>
-ab HTML <html><CR><head><CR></head><CR><body><CR></body><CR></html>
+ab HTMLC <html><CR><head><CR></head><CR><body><CR></body><CR></html>
 "set paste
 
 
