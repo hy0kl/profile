@@ -49,11 +49,13 @@ filetype on
 filetype plugin on
 filetype indent on
 
+" 记住上次编辑的位置
 autocmd BufReadPost *
             \ if line("'\"") > 1 && line("'\"") <= line("$") |
             \   exe "normal! g'\"" |
             \ endif
 
+" 自定义文件模版
 autocmd BufNewFile *.c 0r ~/.vim/template/cconfig.c
 autocmd BufNewFile *.php 0r ~/.vim/template/phpconfig.php
 autocmd BufNewFile *.sh 0r ~/.vim/template/shconfig.sh
