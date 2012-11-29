@@ -17,11 +17,17 @@ set hlsearch
 " set foldmethod
 set fdm=indent
 "set completeopt=longest
+
 ab COMMENT_F /** */
 ab JAVASCRIPT <script type="text/javascript" src=""></script>
 ab HTMLC <html><CR><head><CR></head><CR><body><CR></body><CR></html>
 "set paste
 
+" map
+map <F3> :TlistToggle<CR>
+
+"hi CursorLine  cterm=NONE   ctermbg=gray ctermfg=NONE
+"hi CursorColumn cterm=NONE ctermbg=NONE ctermfg=NONE
 
 set completeopt=longest,menu
 
