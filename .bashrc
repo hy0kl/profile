@@ -67,7 +67,7 @@ PAGER='less -X -M'
 export LESS=' -R '
 
 export EDITOR=vim
-export PATH=$HOME/local/bin:$PATH:/usr/local/mysql/bin
+export PATH=$HOME/local/bin:/usr/local/mysql/bin:$PATH
 
 # some function
 function _memtop()
@@ -138,18 +138,23 @@ magenta=$'\[\e[1;35m\]'
   white=$'\[\e[1;37m\]'
  normal=$'\[\e[m\]'
 
-# for gcc
-# 这块的覆盖技术没有用好
-# 应该把用户的放到最前面
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/local/lib:/usr/local/lib
-C_INCLUDE_PATH=$C_INCLUDE_PATH:/usr/local/include:$HOME/local/include:/Developer/SDKs/MacOSX10.5.sdk/usr/include
+# for gcc {
+# 服务器端的覆盖技术
+LD_LIBRARY_PATH=$HOME/local/lib:/usr/local/lib:/usr/lib
+export LD_LIBRARY_PATH
+
+C_INCLUDE_PATH=$HOME/local/include:/Developer/SDKs/MacOSX10.5.sdk/usr/include:/usr/local/include:/usr/include
 export C_INCLUDE_PATH
-LIBRARY_PATH=$LIBRARY_PATH:/usr/local/lib:$HOME/local/lib:/Developer/SDKs/MacOSX10.5.sdk/usr/lib
+
+LIBRARY_PATH=$HOME/local/lib:/Developer/SDKs/MacOSX10.5.sdk/usr/lib:/usr/local/lib:/usr/lib
 export LIBRARY_PATH
-LD_RUN_PATH=$LD_RUN_PATH:/usr/local/bin:$HOME/local/bin
+
+LD_RUN_PATH=$HOME/local/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/usr/sbin:/sbin
 export LD_RUN_PATH
-DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/usr/local/lib:$HOME/local/lib
+
+DYLD_LIBRARY_PATH=$HOME/local/lib:/usr/local/lib:/usr/lib
 export DYLD_LIBRARY_PATH
+# end for gcc }
 
 #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[00m\]\[\033[31;40m\]@\[\033[00m\]\[\033[36;40m\]\h\[\033[00m\]:\[\033[35;40m\]\w\[\033[00m\]\$ '
 PS1="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\[\033[00m\]\[\033[31;40m\]@\[\033[00m\]\[\033[36;40m\]\h\[\033[00m\]:\[\033[35;40m\]\w\[\033[00m\]$yellow\$git_branch$white\$ $normal"

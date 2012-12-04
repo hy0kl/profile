@@ -31,12 +31,14 @@ map <F3> :TlistToggle<CR>
 
 set completeopt=longest,menu
 
+" php 函数补全
 function AddPHPFuncList()
     set dictionary-=~/.vim/tools/php/functions.txt  dictionary+=~/.vim/tools/php/functions.txt 
     set complete-=k complete+=k
 endfunction
 au FileType php call AddPHPFuncList()
 
+" python api 补全
 function AddPythonFuncList()
     set dictionary-=~/.vim/tools/python/complete-dict dictionary+=~/.vim/tools/python/complete-dict
     set complete-=k complete+=k
@@ -59,3 +61,7 @@ autocmd BufReadPost *
 autocmd BufNewFile *.c 0r ~/.vim/template/cconfig.c
 autocmd BufNewFile *.php 0r ~/.vim/template/phpconfig.php
 autocmd BufNewFile *.sh 0r ~/.vim/template/shconfig.sh
+
+" 高亮自定义
+hi Comment ctermfg = blue
+
