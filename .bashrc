@@ -143,10 +143,10 @@ magenta=$'\[\e[1;35m\]'
 LD_LIBRARY_PATH=$HOME/local/lib:/usr/local/lib:/usr/lib
 export LD_LIBRARY_PATH
 
-C_INCLUDE_PATH=$HOME/local/include:/Developer/SDKs/MacOSX10.5.sdk/usr/include:/usr/local/include:/usr/include
+C_INCLUDE_PATH=$HOME/local/include:/usr/local/include:/usr/include
 export C_INCLUDE_PATH
 
-LIBRARY_PATH=$HOME/local/lib:/Developer/SDKs/MacOSX10.5.sdk/usr/lib:/usr/local/lib:/usr/lib
+LIBRARY_PATH=$HOME/local/lib:/usr/local/lib:/usr/lib
 export LIBRARY_PATH
 
 LD_RUN_PATH=$HOME/local/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/usr/sbin:/sbin
