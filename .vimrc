@@ -45,6 +45,13 @@ function AddPythonFuncList()
 endfunction
 au FileType python call AddPythonFuncList()
 
+" css 属性补全
+function AddCssAttrList()
+    set dictionary-=~/.vim/tools/css/css.attr dictionary+=~/.vim/tools/css/css.attr
+    set complete-=k complete+=k
+endfunction
+au FileType css call AddCssAttrList()
+
 "colorscheme darkblue 
 
 filetype on
