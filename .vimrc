@@ -72,3 +72,12 @@ autocmd BufNewFile *.sh 0r ~/.vim/template/shconfig.sh
 " 高亮自定义
 hi Comment ctermfg = blue
 
+" 状态栏
+"set laststatus=2      " 总是显示状态栏
+"highlight StatusLine cterm=bold ctermfg=yellow ctermbg=blue
+"" 获取当前路径，将$HOME转化为~
+"function! CurDir()
+"    let curdir = substitute(getcwd(), $HOME, "~", "g")
+"    return curdir
+"endfunction
+"set statusline=[%n]\ %f%m%r%h\ \|\ \ pwd:\ %{CurDir()}\ \ \|%=\|\ %l,%c\ %p%%\ \|\ ascii=%b,hex=%b%{((&fenc==\"\")?\"\":\"\ \|\ \".&fenc)}\ \|\ %{$USER}\@\%{hostname()}
