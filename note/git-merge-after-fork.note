@@ -34,3 +34,4 @@ $ git merge feature
 # 有冲突,解决后先 commit
 $ git push  # 完成
 
+PS: 感谢姜同学
