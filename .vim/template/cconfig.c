@@ -1,3 +1,8 @@
+/**
+ * @describe:
+ * @author: hy0kle@gmail.com
+ * */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
@@ -22,11 +27,6 @@
 #include <sys/stat.h>
 #include <sys/mman.h>
 #include <sys/ioctl.h>
-
-/**
- * @describe:
- * @author: hy0kle@gmail.com
- * */
 
 int main(int argc, char *argv[])
 {
