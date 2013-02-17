@@ -22,8 +22,8 @@
     stat = status
 
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-    l  = log --pretty=oneline --abbrev-commit --graph --decorate
-    g  = grep -n --color -E
+    lp = log --pretty=oneline --abbrev-commit --graph --decorate
+    gc  = grep -n --color -E
     ci = commit
     co = checkout
     st = status
@@ -44,6 +44,17 @@
     au = add -u
     awd= add .
     aa = !sh -c 'git add . && git add -u'
+
+    # To list untracked files
+    ut = ls-files --other --exclude-standard
+    # list tracked files
+    tf = ls-files
+    # show modified files
+    lm = ls-files -m
+    # show deleted files
+    ld = ls-files -d
+    # show unmerged files
+    lu = ls-files -u
 
     unstage  = reset HEAD
     uncommit = reset --soft HEAD^
