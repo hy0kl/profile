@@ -274,7 +274,7 @@ syn keyword cFunctions bcmp bcopy bzero index memccpy memchr memcmp memcpy memmo
 syn keyword cFunctions abs acos asin atan atan2 ceil cos cosh exp frexp ldexp log log10 pow sin sinh sqrt tan tanh
 syn keyword cFunctions endgrent endpwent endutent fgetgrent fgetpwent getegid geteuid getgid getgrent getgrgid getgrnam getgroups getpw getpwent getpwnam getpwuid getuid getutent getutid getutline initgroups pututline seteuid setfsgid setfsuid setgid setgrent setgroups setpwent setregid setreuid setuid setutent utmpname
 syn keyword cFunctions crypt bsearch lfind lsearch qsort rand srand
-syn keyword cFunctions close creat dup dup2 fcntl flock fsync lseek mkstemp open read sync write
+syn keyword cFunctions close creat dup dup2 fcntl flock fsync lseek mkstemp open pread read sync write
 syn keyword cFunctions clearerr fclose fdopen feof fflush fgetc fgets fileno fopen fputc fputs fread freopen fseek ftell fwrite getc getchar gets mktemp putc putchar rewind setbuf setbuffer setlinebuf setvbuf ungetc
 syn keyword cFunctions atexit execl execlp execv execve execvp exit _exit vfork getpgid getpgrp getpid getppid getpriority nice on_exit setpgid setpgrp setpriority system wait waitpid fprintf fscanf printf sacnf sprintf sscanf vfprintf vfscanf vprintf vscanf vsprintf vsscanf printf snprintf
 syn keyword cFunctions access alphasort chdir chmod chown chroot closedir fchdir fchmod fchown fstat ftruncate getcwd link lstat opendir readdir readlink remove rename rewinddir seekdir stat symlink telldir truncate umask unlink utime utimes
