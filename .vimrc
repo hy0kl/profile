@@ -21,6 +21,8 @@ set fdm=indent
 ab COMMENT_F /** */
 ab JAVASCRIPT <script type="text/javascript" src=""></script>
 ab HTMLC <html><CR><head><CR></head><CR><body><CR></body><CR></html>
+ab DC <div class=""></div>
+ab DIC <div id="" class=""></div>
 "set paste
 
 " map
@@ -81,3 +83,6 @@ hi Comment ctermfg = blue
 "    return curdir
 "endfunction
 "set statusline=[%n]\ %f%m%r%h\ \|\ \ pwd:\ %{CurDir()}\ \ \|%=\|\ %l,%c\ %p%%\ \|\ ascii=%b,hex=%b%{((&fenc==\"\")?\"\":\"\ \|\ \".&fenc)}\ \|\ %{$USER}\@\%{hostname()}
+
+" 设置自动补全弹出层背景色为粉红
+highlight pmenu ctermbg=magenta
