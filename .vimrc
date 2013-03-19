@@ -85,4 +85,4 @@ hi Comment ctermfg = blue
 "set statusline=[%n]\ %f%m%r%h\ \|\ \ pwd:\ %{CurDir()}\ \ \|%=\|\ %l,%c\ %p%%\ \|\ ascii=%b,hex=%b%{((&fenc==\"\")?\"\":\"\ \|\ \".&fenc)}\ \|\ %{$USER}\@\%{hostname()}
 
 " 设置自动补全弹出层背景色为粉红
-highlight pmenu ctermbg=magenta
+highlight Pmenu ctermbg=magenta
