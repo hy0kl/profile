@@ -37,7 +37,7 @@ do
         # 将 tab 替换成 4 个空格
         sed -i "" 's/	/    /g' $trans
         # 删除行尾的空格
-        sed -i "" 's/[ 	]*$//g' $trans
+        sed -i "" 's/[ ]*$//g' $trans
     done
 done
 
