@@ -9,6 +9,9 @@
 # CTRL + v + TAB 
 # tab 的输入方法
 
+# windows 换行符的输入
+# ctrl + v ctrl + m
+
 #set -x
 
 work_path="/Users/hy0kl/nginx/svn-work/trunk"
@@ -26,9 +29,10 @@ do
     need=$(cat $tmp_file)
     for trans in $need
     do
-        sed -i "" 's/.$//' $trans # 将文件转为 Unix 风格
+        #sed -i "" 's/.$//' $trans # 将文件转为 Unix 风格
+        sed -i "" 's///g' $trans
         sed -i "" 's/	/    /g' $trans # 将 tab 替换成 4 个空格
-        sed -i "" 's/[ ]\+$//g' $trans # 删除行尾的空格
+        sed -i "" 's/[ 	]*$//g' $trans # 删除行尾的空格
     done
 done
 
