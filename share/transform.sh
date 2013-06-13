@@ -29,10 +29,15 @@ do
     need=$(cat $tmp_file)
     for trans in $need
     do
-        #sed -i "" 's/.$//' $trans # 将文件转为 Unix 风格
+        # 将文件转为 Unix 风格,有误伤,需要默认文件为 doc 风格
+        #sed -i "" 's/.$//' $trans
+
+        # 将文件转为 Unix 风格
         sed -i "" 's///g' $trans
-        sed -i "" 's/	/    /g' $trans # 将 tab 替换成 4 个空格
-        sed -i "" 's/[ 	]*$//g' $trans # 删除行尾的空格
+        # 将 tab 替换成 4 个空格
+        sed -i "" 's/	/    /g' $trans
+        # 删除行尾的空格
+        sed -i "" 's/[ 	]*$//g' $trans
     done
 done
 
