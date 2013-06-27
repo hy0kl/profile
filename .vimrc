@@ -36,6 +36,8 @@ set completeopt=longest,menu
 " php 函数补全
 function AddPHPFuncList()
     set dictionary-=~/.vim/tools/php/functions.txt  dictionary+=~/.vim/tools/php/functions.txt 
+    " php 文件中也可以补齐 css
+    " set dictionary-=~/.vim/tools/css/css.attr dictionary+=~/.vim/tools/css/css.attr
     set complete-=k complete+=k
 endfunction
 au FileType php call AddPHPFuncList()
@@ -43,6 +45,7 @@ au FileType php call AddPHPFuncList()
 " python api 补全
 function AddPythonFuncList()
     set dictionary-=~/.vim/tools/python/complete-dict dictionary+=~/.vim/tools/python/complete-dict
+    " set dictionary-=~/.vim/tools/css/css.attr dictionary+=~/.vim/tools/css/css.attr
     set complete-=k complete+=k
 endfunction
 au FileType python call AddPythonFuncList()
@@ -53,6 +56,8 @@ function AddCssAttrList()
     set complete-=k complete+=k
 endfunction
 au FileType css call AddCssAttrList()
+
+" tpl
 
 "colorscheme darkblue 
 
@@ -72,11 +77,12 @@ autocmd BufNewFile *.php 0r ~/.vim/template/phpconfig.php
 autocmd BufNewFile *.sh 0r ~/.vim/template/shconfig.sh
 
 " 高亮自定义
-hi Comment ctermfg = blue
+hi Comment ctermfg=blue
 
 " 状态栏
 "set laststatus=2      " 总是显示状态栏
 "highlight StatusLine cterm=bold ctermfg=yellow ctermbg=blue
+
 "" 获取当前路径，将$HOME转化为~
 "function! CurDir()
 "    let curdir = substitute(getcwd(), $HOME, "~", "g")
@@ -86,3 +92,10 @@ hi Comment ctermfg = blue
 
 " 设置自动补全弹出层背景色为粉红
 highlight Pmenu ctermbg=magenta
+
+" 实现 show print margin 的方法
+"set colorcolumn=80
+"hi ColorColumn ctermbg=lightgrey guibg=lightgrey
+
+"highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+"match OverLength /\%81v.\+/
