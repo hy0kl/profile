@@ -13,6 +13,11 @@ export HISTCONTROL=ignoredups
 #shopt -s checkwinsize
 
 ### alias ###
+# svn
+alias svn-st='svn st | grep ^M'
+alias svn-log='svn log -v --limit 5'
+
+# pro
 alias ll='ls -lG'
 alias la='ls -GAalth'
 alias l='ls -GCF'
@@ -22,6 +27,7 @@ alias tree='tree -C'
 alias md5sum='md5 -r'
 alias cdiff='~/local/colordiff/colordiff.pl | less -R'
 alias rscp='rsync -v -P -e ssh'
+
 # alias for git
 alias git-ci='git commit'
 alias git-log='git log'
