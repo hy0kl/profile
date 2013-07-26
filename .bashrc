@@ -159,8 +159,11 @@ export LIBRARY_PATH
 LD_RUN_PATH=$HOME/local/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/usr/sbin:/sbin
 export LD_RUN_PATH
 
-DYLD_LIBRARY_PATH=$HOME/local/lib:/usr/local/lib:/usr/lib
+DYLD_LIBRARY_PATH=$HOME/local/lib:/usr/local/lib:/usr/local/mysql/lib
 export DYLD_LIBRARY_PATH
+
+DYLD_FALLBACK_LIBRARY_PATH=/opt/local/lib:/usr/lib
+export DYLD_FALLBACK_LIBRARY_PATH
 # end for gcc }
 
 #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[00m\]\[\033[31;40m\]@\[\033[00m\]\[\033[36;40m\]\h\[\033[00m\]:\[\033[35;40m\]\w\[\033[00m\]\$ '
