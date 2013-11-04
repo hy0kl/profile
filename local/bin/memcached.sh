@@ -21,7 +21,7 @@
 PORT="11211"
 USER="hy0kl"
 MAXCONN="1024"
-CACHESIZE="64"
+CACHESIZE="8"
 OPTIONS=""
 #SYSCONFIG="/usr/local/memcached/my.conf"
 

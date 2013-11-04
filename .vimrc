@@ -99,3 +99,21 @@ highlight Pmenu ctermbg=magenta
 
 "highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 "match OverLength /\%81v.\+/
+
+"仅检测PHP语法
+autocmd FileType php map <F2> :!~/php/bin/php -l %<cr>
+
+let g:DoxygenToolkit_paramTag_pre="@param: "
+let g:DoxygenToolkit_returnTag   ="@return: "
+let g:DoxygenToolkit_authorName="hy0kle@gmail.com"
+let g:DoxygenToolkit_licenseTag="\<enter>Copyright (C) Technology LimitedCompany"
+let g:DoxygenToolkit_briefTag_funcName="yes"
+let g:doxygen_enhanced_color=1
+"自定义快捷键
+vmap <C-S-P>    dO#endif<Esc>PO#if 0<Esc>
+" 函数注释
+map <F4> <Esc>:Dox<cr>
+" 文件版权声明
+map <F5> <Esc>:DoxAuthor<cr>
+" Copyright
+map <F6> <Esc>:DoxLic<cr>
