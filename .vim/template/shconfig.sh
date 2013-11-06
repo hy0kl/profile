@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # @author:   Jerry Yang(hy0kle@gmail.com)
 # @describe:
 
