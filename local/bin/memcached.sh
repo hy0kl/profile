@@ -21,7 +21,8 @@
 PORT="11211"
 USER="hy0kl"
 MAXCONN="1024"
-CACHESIZE="8"
+# 开发环境,使用量小
+CACHESIZE="1"
 OPTIONS=""
 #SYSCONFIG="/usr/local/memcached/my.conf"
 
