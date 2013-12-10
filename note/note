@@ -1,0 +1,5 @@
+1. perl 脚本运行报错：Can't locate DBI.pm的解决办法 
+FROM: http://blog.chinaunix.net/uid-7931217-id-3516802.html
+
+缺少DBI包，使用如下命令进行安装：
+perl -MCPAN -e "install DBI"
