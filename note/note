@@ -3,3 +3,10 @@ FROM: http://blog.chinaunix.net/uid-7931217-id-3516802.html
 
 缺少DBI包，使用如下命令进行安装：
 perl -MCPAN -e "install DBI"
+
+2. Error on installing SVN extension with pecl
+failed to find svn_client.h
+
+http://stackoverflow.com/questions/2245907/error-on-installing-svn-extension-with-pecl
+sudo apt-get install libsvn-dev
+

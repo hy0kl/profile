@@ -1,3 +1,12 @@
 http://coolshell.cn/articles/1218.html # 常用的 code review 工具简介
 
-http://groogle.sourceforge.net/install.php # php 写的 code review 工具
+http://groogle.sourceforge.net # php 写的 code review 工具
+
+# base on jave
+https://code.google.com/p/gerrit/   # Web based code review and project management for Git based projects.
+
+# facebook
+http://phabricator.org/
+# phabricator 中文手册
+http://www.oschina.net/question/191440_125562
+
