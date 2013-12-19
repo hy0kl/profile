@@ -6,31 +6,37 @@ set autoindent
 set expandtab   
 set ts=4 
 set shiftwidth=4
+" 高亮当前行
 set cursorline
+" 保存文件时不要生成备份文件
 set nobackup
 " just for encode
 set fileencodings=utf-8,gb2312,gbk,gb18030
 set termencoding=utf-8
 set fileformats=unix
 set encoding=utf-8
+" 高亮搜索词
 set hlsearch
 " set foldmethod
 set fdm=indent
 "set completeopt=longest
 
-ab COMMENT_F /** */
-ab JAVASCRIPT <script type="text/javascript" src=""></script>
-ab HTMLC <html><CR><head><CR></head><CR><body><CR></body><CR></html>
+ab JT <script type="text/javascript" src=""></script>
 ab DC <div class=""></div>
 ab DIC <div id="" class=""></div>
+ab SC <span class=""></span>
+ab SIC <span id="" class=""></span>
+
+" 设置粘贴模式
 "set paste
 
-" map
+" map tags list
 map <F3> :TlistToggle<CR>
 
 "hi CursorLine  cterm=NONE   ctermbg=gray ctermfg=NONE
 "hi CursorColumn cterm=NONE ctermbg=NONE ctermfg=NONE
 
+" 自动补全菜单控制
 set completeopt=longest,menu
 
 " php 函数补全
@@ -45,7 +51,6 @@ au FileType php call AddPHPFuncList()
 " python api 补全
 function AddPythonFuncList()
     set dictionary-=~/.vim/tools/python/complete-dict dictionary+=~/.vim/tools/python/complete-dict
-    " set dictionary-=~/.vim/tools/css/css.attr dictionary+=~/.vim/tools/css/css.attr
     set complete-=k complete+=k
 endfunction
 au FileType python call AddPythonFuncList()
@@ -57,10 +62,9 @@ function AddCssAttrList()
 endfunction
 au FileType css call AddCssAttrList()
 
-" tpl
-
 "colorscheme darkblue 
 
+" 打开文件时检测文件类型,自动匹配
 filetype on
 filetype plugin on
 filetype indent on
@@ -117,3 +121,4 @@ map <F4> <Esc>:Dox<cr>
 map <F5> <Esc>:DoxAuthor<cr>
 " Copyright
 map <F6> <Esc>:DoxLic<cr>
+
