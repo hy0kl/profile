@@ -13,8 +13,23 @@
 # ctrl + v ctrl + m
 
 #set -x
-
 work_path="/Users/hy0kl/nginx/svn-work/trunk"
+
+if [ "$#" -lt 1 ] || [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
+    echo "Usage: $0 \"ABS_PATH\"" >&2
+    echo "default transfer file in(php tpl js css)"
+    exit 1
+else
+    work_path="$1"
+fi
+
+if [ -d "$work_path" ]; then
+    echo "start jobs..."
+else
+    echo "$work_path does not exist, please check it out."
+    exit 2
+fi
+
 date_str=$(date +"%Y-%m-%d")
 transfer_file="php tpl js css"
 
@@ -42,3 +57,4 @@ do
 done
 
 rm -rf tmp
+echo "transfer file jobs done."

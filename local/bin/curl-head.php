@@ -10,19 +10,19 @@ if (! ($argc > 1))
 }
 
 $url = $argv[1];
-$ch = curl_init();   
-if (!$ch) 
-{  
-   die("Couldn't initialize a cURL handle");  
-}  
-// set some cURL options  
-curl_setopt($ch, CURLOPT_URL, $url);  
-curl_setopt($ch, CURLOPT_HEADER, 1);    // 设置显示返回的http头  
+$ch = curl_init();
+if (!$ch)
+{
+   die("Couldn't initialize a cURL handle");
+}
+// set some cURL options
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_HEADER, 1);    // 设置显示返回的http头
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);    // 不关心 content
 curl_setopt($ch, CURLOPT_TIMEOUT, 30);  // 超时设置
 curl_exec($ch);
 
-$info = curl_getinfo($ch);  // 获取http头  
-curl_close($ch);    // close cURL handler  
+$info = curl_getinfo($ch);  // 获取http头
+curl_close($ch);    // close cURL handler
 
 print_r($info);
