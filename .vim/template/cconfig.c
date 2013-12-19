@@ -1,6 +1,6 @@
 /**
  * @describe:
- * @author: hy0kle@gmail.com
+ * @author: Jerry Yang(hy0kle@gmail.com)
  * */
 
 #include <stdio.h>
