@@ -30,7 +30,7 @@ OPTIONS=""
 #[ -r "$SYSCONFIG" ] && source "$SYSCONFIG"
 
 RETVAL=0
-prog="/opt/local/bin/memcached"
+prog="/usr/local/bin/memcached"
 desc="Distributed memory caching"
 
 # global functions {

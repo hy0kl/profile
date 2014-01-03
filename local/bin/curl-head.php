@@ -5,7 +5,7 @@
 */
 if (! ($argc > 1))
 {
-    echo "no input URL. usage: curl-head 'http://example.org'\n";
+    echo "no input URL.\nusage: curl-head 'http://example.org'\n";
     exit;
 }
 
@@ -18,8 +18,9 @@ if (!$ch)
 // set some cURL options
 curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_HEADER, 1);    // 设置显示返回的http头
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);    // 不关心 content
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);    // 设置执行时将结果集放入缓冲区
 curl_setopt($ch, CURLOPT_TIMEOUT, 30);  // 超时设置
+curl_setopt($ch, CURLOPT_NOBODY, true);
 curl_exec($ch);
 
 $info = curl_getinfo($ch);  // 获取http头

@@ -10,3 +10,39 @@ failed to find svn_client.h
 http://stackoverflow.com/questions/2245907/error-on-installing-svn-extension-with-pecl
 sudo apt-get install libsvn-dev
 
+3. PHP Error[2]: Error while sending QUERY packet.
+http://stackoverflow.com/questions/5688403/how-to-check-and-set-max-allowed-packet-mysql-variable
+---
+max_allowed_packet is set in mysql config, not on php side
+
+[mysqld]
+max_allowed_packet=16M 
+You can see it's curent value in mysql like this:
+
+SHOW VARIABLES LIKE 'max_allowed_packet'
+
+You can try to change it like this, but it's unlikely this will work on shared hosting:
+
+SET GLOBAL max_allowed_packet=16777216;
+
+You can read about it here http://dev.mysql.com/doc/refman/5.1/en/packet-too-large.html
+---
+The following PHP worked for me (using mysqli extension but queries should be the same for other extensions):
+
+$db = new mysqli( 'localhost', 'user', 'pass', 'dbname' );
+// to get the max_allowed_packet
+$maxp = $db->query( 'SELECT @@global.max_allowed_packet' )->fetch_array();
+echo $maxp[ 0 ];
+// to set the max_allowed_packet to 500MB
+$db->query( 'SET @@global.max_allowed_packet = ' . 500 * 1024 * 1024 );
+So if you've got a query you expect to be pretty long, you can make sure that mysql will accept it with something like:
+
+$sql = "some really long sql query...";
+$db->query( 'SET @@global.max_allowed_packet = ' . strlen( $sql ) + 1024 );
+$db->query( $sql );
+Notice that I added on an extra 1024 bytes to the length of the string because according to the manual,
+
+The value should be a multiple of 1024; nonmultiples are rounded down to the nearest multiple.
+
+That should hopefully set the max_allowed_packet size large enough to handle your query. I haven't tried this on a shared host, so the same caveat as @Glebushka applies.
+
