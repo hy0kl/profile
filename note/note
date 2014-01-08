@@ -46,3 +46,23 @@ The value should be a multiple of 1024; nonmultiples are rounded down to the nea
 
 That should hopefully set the max_allowed_packet size large enough to handle your query. I haven't tried this on a shared host, so the same caveat as @Glebushka applies.
 
+4. php htmlspecialchars() 有陷阱,默认不转义单引号,如果查数据库时,刚好用了单引号引起字段值,有被注入的危险.
+string htmlspecialchars ( string $string [, int $flags = ENT_COMPAT | ENT_HTML401 [, string $encoding = 'UTF-8' [, bool $double_encode = true ]]] );
+$flags
+ENT_COMPAT  Will convert double-quotes and leave single-quotes alone.
+ENT_QUOTES  Will convert both double and single quotes.
+ENT_NOQUOTES    Will leave both double and single quotes unconverted.
+ENT_IGNORE   Silently discard invalid code unit sequences instead of returning an empty string. Using this flag is discouraged as it » may have security implications.
+ENT_SUBSTITUTE   Replace invalid code unit sequences with a Unicode Replacement Character U+FFFD (UTF-8) or &#FFFD; (otherwise) instead of returning an empty string.
+ENT_DISALLOWED   Replace invalid code points for the given document type with a Unicode Replacement Character U+FFFD (UTF-8) or &#FFFD; (otherwise) instead of leaving them as is. This may be useful, for instance, to ensure the well-formedness of XML documents with embedded external content.
+ENT_HTML401  Handle code as HTML 4.01.
+ENT_XML1     Handle code as XML 1.
+ENT_XHTML    Handle code as XHTML.
+ENT_HTML5    Handle code as HTML 5.
+
+5. Tesseract ocr
+http://miphol.com/muse/2013/05/tesseract-ocr.html
+sudo apt-get install imagemagick
+把图片二值化(纯黑白化)也可以有效地提高准确率.
+convert input.png -threshold 50% output.png
+
