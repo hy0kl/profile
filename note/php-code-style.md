@@ -273,7 +273,7 @@ $sql = "SELECT `id`, `name` FROM `people` "
     }
 ```
 对包括"elseif" 或 "else"的 "if" 语句，和 "if" 结构的格式类似， 下面的例子示例 "if" 语句， 包括 "elseif" 或 "else" 的格式约定：
-  
+
 ```php
     if ($a != 2) {
         $a = 2;
@@ -404,6 +404,7 @@ else
 9. 在数组中查找元素, isset() 比 in_array() 效率要高.但要注意的是,如果数组元素被赋值为 null, isset() 返回真值,但也许不符合调用者预期.
 10. 对象中的独立方法尽量设计为静态方法.
 11. 编码转换时,用 mb_ 函数库代替 iconv* 函数库.
+12. 将逻辑相关性相比较强的代码和其他代码以空行来分块,有效提高代码可读性.毕竟代码读的时间远比写的时间长得多.
 
 *代码示例 1*
 
@@ -437,7 +438,12 @@ foreach ($users as $uid => $info)
 2). htmlspecialchars() 函数有陷井.它的原型如下:
 
 ```php
-string htmlspecialchars ( string $string [, int $flags = ENT_COMPAT | ENT_HTML401 [, string $encoding = 'UTF-8' [, bool $double_encode = true ]]] )
+string htmlspecialchars ( string $string
+    [, int $flags = ENT_COMPAT | ENT_HTML401 [, string $encoding = 'UTF-8'
+    [, bool $double_encode = true ]]] )
 ```
 它默认不对 ' 引号进行 html 转义,有可能对过滤不严格的代码造成 sql 注入.需要指定第二个参数为 *ENT_QUOTES* 才会将双引号 " 和单引号 ' 转义成对应的 html 实体.
+
 3). strip_tags() 在过滤不规范 html 时存在陷井,存在过滤不符合预期的情况,可能会打断文档流.
+
+4). 三元操作符的优先级问题,适当的 () 可有效解决,并且提高代码可读性.
