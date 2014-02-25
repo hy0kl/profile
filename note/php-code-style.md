@@ -11,6 +11,7 @@
 
 <h1 id="php_file">PHP File 文件格式</h1>
 
+
 ## 常规
 对于只包含有 PHP 代码的文件，结束标志("?>")是不允许存在的，PHP 自身不需要("?>"), 这样做, 可以防止它的末尾的被意外地注入相应。
 
@@ -28,6 +29,7 @@
 ***注：不要使用 苹果操作系统的回车（0x0D）或 Windows 电脑的回车换行组合如（0x0D,0x0A）。***
 
 <h2 id="name_appoint">命名约定</h2>
+
 ### 函数和方法
 函数名只包含字母数字字符，下划线是不允许的。数字是允许的但大多数情况下不鼓励。
 
@@ -70,6 +72,7 @@ EMBED_SUPPRESSEMBEDEXCEPTION。
 常量必须通过 "const" 定义为类的成员，强烈不鼓励使用 "define" 定义的全局常量。
 
 <h1 id="code_style">编码风格</h1>
+
 ## PHP 代码划分（Demarcation）
 PHP 代码总是用完整的标准的 PHP 标签定界:
 
@@ -315,6 +318,7 @@ switch 语句应当有 default。
 - 注： 有时候，在 falls through 到下个 case 的 case 语句中不写 break or return 很有用。 为了区别于 bug，任何 case 语句中，所有不写 break or return 的地方应当有一个 "// break intentionally omitted" 这样的注释来表明 break 是故意忽略的。
 
 <h1 id="code_comment">注释文档</h1>
+
 ## 格式
 所有类文件必须在文件的顶部包含文件级 （"file-level"）的 docblock ，在每个类的顶部放置一个 "class-level" 的 docblock。下面是一些例子：
 
@@ -370,11 +374,13 @@ switch 语句应当有 default。
 ```
 
 <h1 id="other">其他</h1>
+
 - [约定编码规范](#standard)
 - [编码小技巧](#code_skill)
 - [常见的坑](#some_trap)
 
 <h2 id="standard">约定编码规范</h2>
+
 1. 函数调用时将函数名与左(之间不要留空白,关键字与左(之间留空白.
 2. 二元操作符左右都留空.
 3. 函数参数之间的,右边留空.
@@ -394,6 +400,7 @@ else
 ```
 
 <h2 id="code_skill">编码小技巧</h2>
+
 1. 如果 if 的条件判断是变量和常量相比较,建议将常量写在 == 的左边,可以有效防止少写一个 = 带来的隐患.
 2. 字符串连接时,如果明确没有变量替换,则优先使用单引号 ''.
 3. 尽量使用 foreach 遍历数组.
@@ -418,6 +425,7 @@ for ($i = 0; $i < $len; $i++)
 ```
 
 <h2 id="some_trap">常见的坑</h2>
+
 1). 遍历数组时,切不可用采用引用的方式,例如下面的代码,应引起足够的重视:
 
 ```php
