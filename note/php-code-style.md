@@ -88,7 +88,7 @@ PHP 代码总是用完整的标准的 PHP 标签定界:
 
 当文字字符串包含单引号（apostrophe ）就用双引号括起来，特别在 SQL 语句中有用：
 
-```
+```php
 $sql = "SELECT `id`, `name` from `people` WHERE `name`='Fred' OR `name`='Susan'";
 ```
 在转义单引号时，上述语法是首选的，因为很容易阅读。
@@ -96,7 +96,7 @@ $sql = "SELECT `id`, `name` from `people` WHERE `name`='Fred' OR `name`='Susan'"
 ##变量替换
 ###变量替换有下面这些形式：
 
-```
+```php
     $greeting = "Hello $name, welcome back!";
     $greeting = "Hello {$name}, welcome back!";
   	// 为保持一致，这个形式不允许：
@@ -106,12 +106,12 @@ $sql = "SELECT `id`, `name` from `people` WHERE `name`='Fred' OR `name`='Susan'"
 ##字符串连接
 字符串必需用 "." 操作符连接，在它的前后加上空格以提高可读性：
 
-```
+```php
 $company = 'Zend' . ' ' . 'Technologies';
 ```
 当用 "." 操作符连接字符串，鼓励把代码可以分成多个行，也是为提高可读性。在这些例子中，每个连续的行应当由 whitespace 来填补，例如 "." 和 "=" 对齐：
 
-```
+```php
 $sql = "SELECT `id`, `name` FROM `people` "
     . "WHERE `name` = 'Susan' "
     . "ORDER BY `name` ASC ";
@@ -125,12 +125,12 @@ $sql = "SELECT `id`, `name` FROM `people` "
 
 当用 array 函数声明有索引的数组，在每个逗号的后面间隔空格以提高可读性：
 
-```
+```php
     $sampleArray = array(1, 2, 3, 'Zend', 'Studio');
 ```
 可以用 "array" 声明多行有索引的数组，在每个连续行的开头要用空格填补对齐：
 
-```
+```php
     $sampleArray = array(
         1, 2, 3, 'Zend', 'Studio',
         $a, $b, $c,
@@ -141,7 +141,7 @@ $sql = "SELECT `id`, `name` FROM `people` "
 ##关联数组
 当用声明关联数组，array 我们鼓励把代码分成多行，在每个连续行的开头用空格填补来对齐键和值：
 
-```
+```php
     $sampleArray = array(
         'firstKey'  => 'firstValue',
         'secondKey' => 'secondValue',
@@ -162,7 +162,7 @@ $sql = "SELECT `id`, `name` FROM `people` "
 
 下面是个可接受的类的例子： // 459 9506 － 441 9658 下次从这里开始
 
-```
+```php
     /**
      * Documentation Block Here
      */
@@ -190,7 +190,7 @@ $sql = "SELECT `id`, `name` FROM `people` "
 
 下面是可接受的在类中的函数声明的例子：
 
-```
+```php
     /**
      * Documentation Block Here
      */
@@ -250,7 +250,7 @@ $sql = "SELECT `id`, `name` FROM `people` "
 
 带有数组参数的函数，函数的调用可包括 "array" 提示并可以分成多行来提高可读性，同时，书写数组的标准仍然适用：
 
-```
+```php
     threeArguments(array(1, 2, 3), 2, 3);
     threeArguments(array(1, 2, 3, 'Zend', 'Studio',
                         $a, $b, $c,
@@ -265,14 +265,14 @@ $sql = "SELECT `id`, `name` FROM `people` "
 
 前花括号必须和条件语句在同一行，后花括号单独在最后一行，其中的内容用四个空格缩进。
 
-```
+```php
     if ($a != 2) {
         $a = 2;
     }
 ```
 对包括"elseif" 或 "else"的 "if" 语句，和 "if" 结构的格式类似， 下面的例子示例 "if" 语句， 包括 "elseif" 或 "else" 的格式约定：
   
-```
+```php
     if ($a != 2) {
         $a = 2;
     } else {
@@ -295,7 +295,7 @@ $sql = "SELECT `id`, `name` FROM `people` "
 
 "switch" 里的代码必须有四个空格缩进，在"case"里的代码再缩进四个空格。
 
-```
+```php
     switch ($numPeople) {
         case 1:
             break;
@@ -318,7 +318,7 @@ switch 语句应当有 default。
 ##文件
 每个包含 PHP 代码的文件必须至少在文件顶部的 docblock 包含这些 phpDocumentor 标签：
 
-```
+```php
 /**
  * 文件的简短描述
  *
@@ -337,7 +337,7 @@ switch 语句应当有 default。
 ##类
 每个类必须至少包含这些 phpDocumentor 标签：
 
-```
+```php
 /**
  * 类的简述
  *
