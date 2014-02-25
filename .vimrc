@@ -3,8 +3,8 @@ set nocompatible
 set number
 set autoindent
 "set smartindent
-set expandtab   
-set ts=4 
+set expandtab
+set ts=4
 set shiftwidth=4
 " 高亮当前行
 set cursorline
@@ -41,7 +41,7 @@ set completeopt=longest,menu
 
 " php 函数补全
 function AddPHPFuncList()
-    set dictionary-=~/.vim/tools/php/functions.txt  dictionary+=~/.vim/tools/php/functions.txt 
+    set dictionary-=~/.vim/tools/php/functions.txt  dictionary+=~/.vim/tools/php/functions.txt
     " php 文件中也可以补齐 css
     " set dictionary-=~/.vim/tools/css/css.attr dictionary+=~/.vim/tools/css/css.attr
     set complete-=k complete+=k
@@ -62,7 +62,7 @@ function AddCssAttrList()
 endfunction
 au FileType css call AddCssAttrList()
 
-"colorscheme darkblue 
+"colorscheme darkblue
 
 " 打开文件时检测文件类型,自动匹配
 filetype on
@@ -106,6 +106,9 @@ highlight Pmenu ctermbg=magenta
 
 "仅检测PHP语法
 autocmd FileType php map <F2> :!~/php/bin/php -l %<cr>
+
+" JSON 语法
+au! BufRead,BufNewFile *.json set filetype=json
 
 let g:DoxygenToolkit_paramTag_pre="@param: "
 let g:DoxygenToolkit_returnTag   ="@return: "
