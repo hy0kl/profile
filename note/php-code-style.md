@@ -70,7 +70,7 @@ EMBED_SUPPRESSEMBEDEXCEPTION。
 ##PHP 代码划分（Demarcation）
 PHP 代码总是用完整的标准的 PHP 标签定界:
 
-```
+```php
 <?php
 /** some code here ... */
 ?>
@@ -81,7 +81,7 @@ PHP 代码总是用完整的标准的 PHP 标签定界:
 ###字符串文字
 当字符串是文字(不包含变量)，应当用单引号（ apostrophe ）来括起来：
 
-```
+```php
   $a = 'Example String';
 ```
 包含单引号（'）的字符串文字
