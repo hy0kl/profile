@@ -416,7 +416,7 @@ for ($i = 0; $i < $len; $i++)
 ```
 
 ## 常见的坑
-1. 遍历数组时,切不可用采用引用的方式,例如下面的代码,应引起足够的重视:
+1). 遍历数组时,切不可用采用引用的方式,例如下面的代码,应引起足够的重视:
 
 ```php
 foreach ($users as &$info)
@@ -433,10 +433,11 @@ foreach ($users as $uid => $info)
 	$users[$id]['foo'] = 'bar';
 }
 ```
-2. htmlspecialchars() 函数有陷井.它的原型如下:
+
+2). htmlspecialchars() 函数有陷井.它的原型如下:
 
 ```php
 string htmlspecialchars ( string $string [, int $flags = ENT_COMPAT | ENT_HTML401 [, string $encoding = 'UTF-8' [, bool $double_encode = true ]]] )
 ```
-它默认不对 ' 引号进行 html 转义,需要指定第二个参数为 *ENT_QUOTES* 才会将双引号 " 和单引号 ' 转义成对应的 html 实体.
-3. strip_tags() 在过滤不规范 html 时存在陷井,存在过滤不符合预期的情况,可能会打断文档流.
+它默认不对 ' 引号进行 html 转义,有可能对过滤不严格的代码造成 sql 注入.需要指定第二个参数为 *ENT_QUOTES* 才会将双引号 " 和单引号 ' 转义成对应的 html 实体.
+3). strip_tags() 在过滤不规范 html 时存在陷井,存在过滤不符合预期的情况,可能会打断文档流.
