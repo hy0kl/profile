@@ -386,6 +386,10 @@ if ('admin' == $user)
 {
     print('hello!');
 }
+else
+{
+    echo 'sorry';
+}
 ```
 
 ## 编码小技巧
@@ -393,7 +397,7 @@ if ('admin' == $user)
 2. 字符串连接时,如果明确没有变量替换,则优先使用单引号 ''.
 3. 尽量使用 foreach 遍历数组.
 4. 字符串输出使用 echo 代替 print. echo 是个关键字, print() 是个函数,有返回值,有函数调用的堆栈时间.
-5. strlen() 的时间复杂是常数级的,切记不要放到 for() 的条件判断中,而是采用代码示例 1:
+5. strlen() 的时间复杂是常数级的,切记不要放到 for() 的条件判断中,而是采用 *代码示例 1*:
 6. count() 原理同上.
 7. [] 要比 array_push() 效率高.
 8. 对数组的操作,原生 API 效率很高,优先考虑使用.例如对元素去重的 array_uniq();
@@ -429,3 +433,10 @@ foreach ($users as $uid => $info)
 	$users[$id]['foo'] = 'bar';
 }
 ```
+2. htmlspecialchars() 函数有陷井.它的原型如下:
+
+```php
+string htmlspecialchars ( string $string [, int $flags = ENT_COMPAT | ENT_HTML401 [, string $encoding = 'UTF-8' [, bool $double_encode = true ]]] )
+```
+它默认不对 ' 引号进行 html 转义,需要指定第二个参数为 *ENT_QUOTES* 才会将双引号 " 和单引号 ' 转义成对应的 html 实体.
+3. strip_tags() 在过滤不规范 html 时存在陷井,存在过滤不符合预期的情况,可能会打断文档流.
