@@ -1,15 +1,15 @@
 # 绪论
 ## 编码标准的话题包括:
-- [PHP File 文件格式](#php_file)
+- [PHP File 文件格式](#php-file-文件格式)
 - [命名约定](#命名约定)
-- [编码风格](#code_style)
-- [注释文档](#code_comment)
-- [其他](#other)
+- [编码风格](#编码风格)
+- [注释文档](#注释文档)
+- [其他](#其他)
 
 ### 目标
 编码标准对任何开发项目都很重要，特别是很多开发者在同一项目上工作。编码标准帮助确保代码的高质量、少 bug 和容易维护。
 
-<h1 id="php_file">PHP File 文件格式</h1>
+#PHP File 文件格式
 
 
 ## 常规
@@ -71,7 +71,7 @@ EMBED_SUPPRESSEMBEDEXCEPTION。
 
 常量必须通过 "const" 定义为类的成员，强烈不鼓励使用 "define" 定义的全局常量。
 
-<h1 id="code_style">编码风格</h1>
+#编码风格
 
 ## PHP 代码划分（Demarcation）
 PHP 代码总是用完整的标准的 PHP 标签定界:
@@ -317,7 +317,7 @@ switch 语句应当有 default。
 
 - 注： 有时候，在 falls through 到下个 case 的 case 语句中不写 break or return 很有用。 为了区别于 bug，任何 case 语句中，所有不写 break or return 的地方应当有一个 "// break intentionally omitted" 这样的注释来表明 break 是故意忽略的。
 
-<h1 id="code_comment">注释文档</h1>
+#注释文档
 
 ## 格式
 所有类文件必须在文件的顶部包含文件级 （"file-level"）的 docblock ，在每个类的顶部放置一个 "class-level" 的 docblock。下面是一些例子：
@@ -373,11 +373,11 @@ switch 语句应当有 default。
     @throws exceptionclass [description]
 ```
 
-<h1 id="other">其他</h1>
+#其他
 
-- [约定编码规范](#standard)
-- [编码小技巧](#code_skill)
-- [常见的坑](#some_trap)
+- [约定编码规范](#约定编码规范)
+- [编码小技巧](#编码小技巧)
+- [常见的坑](#常见的坑)
 
 <h2 id="standard">约定编码规范</h2>
 
@@ -399,7 +399,7 @@ else
 }
 ```
 
-<h2 id="code_skill">编码小技巧</h2>
+##编码小技巧
 
 1. 如果 if 的条件判断是变量和常量相比较,建议将常量写在 == 的左边,可以有效防止少写一个 = 带来的隐患.
 2. 字符串连接时,如果明确没有变量替换,则优先使用单引号 ''.
@@ -424,7 +424,7 @@ for ($i = 0; $i < $len; $i++)
 }
 ```
 
-<h2 id="some_trap">常见的坑</h2>
+##常见的坑
 
 1). 遍历数组时,切不可用采用引用的方式,例如下面的代码,应引起足够的重视:
 
