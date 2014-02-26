@@ -1,13 +1,13 @@
 [user]
-	name = Jerry Yang
-	email = hy0kle@gmail.com
+	name  = "Jerry Yang"
+	email = "hy0kle@gmail.com"
 [merge]
     summary = true
     tool = vimdiff
 [diff]
     renames = copy
 [color]
-     diff = auto
+     diff   = auto
      status = true
      branch = auto
      interactive = auto;
@@ -23,7 +23,7 @@
 
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     lp = log --pretty=oneline --abbrev-commit --graph --decorate
-    gc  = grep -n --color -E
+    gc = grep -n --color -E
     ci = commit
     co = checkout
     st = status
