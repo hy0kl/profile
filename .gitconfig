@@ -1,21 +1,27 @@
 [user]
 	name  = "Jerry Yang"
 	email = "hy0kle@gmail.com"
+
 [merge]
     summary = true
     tool = vimdiff
+
 [diff]
     renames = copy
+
 [color]
      diff   = auto
      status = true
      branch = auto
      interactive = auto;
      ui = auto;
+
  [status]
      submodulesummary = -1
+
  [format]
      numbered = auto
+
  [alias]
     sed  = !git ls-files --stage | grep ^100 | awk '{print $4}' | xargs sed $@
     who  = shortlog -n -s --no-merges
