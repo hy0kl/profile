@@ -1,6 +1,6 @@
 [user]
-	name  = "Jerry Yang"
-	email = "hy0kle@gmail.com"
+    name  = "Jerry Yang"
+    email = "hy0kle@gmail.com"
 
 [merge]
     summary = true
