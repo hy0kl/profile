@@ -40,9 +40,9 @@
 这些是可接受的函数名的例子：
 
 ```
-    filterInput()
-    getElementById()
-    widgetFactory()
+filterInput()
+getElementById()
+widgetFactory()
 ```
 对于面向对象编程，实例或静态变量的访问器总是以 "get" 或 "set" 为前缀。在设计模式实现方面，如单态模式（singleton）或工厂模式（factory）， 方法的名字应当包含模式的名字，这样名字更能描述整个行为。
 
@@ -88,7 +88,7 @@ PHP 代码总是用完整的标准的 PHP 标签定界:
 当字符串是文字(不包含变量)，应当用单引号（ apostrophe ）来括起来：
 
 ```php
-  $a = 'Example String';
+$a = 'Example String';
 ```
 包含单引号（'）的字符串文字
 
@@ -103,10 +103,10 @@ $sql = "SELECT `id`, `name` from `people` WHERE `name`='Fred' OR `name`='Susan'"
 ### 变量替换有下面这些形式：
 
 ```php
-    $greeting = "Hello $name, welcome back!";
-    $greeting = "Hello {$name}, welcome back!";
-  	// 为保持一致，这个形式不允许：
-    $greeting = "Hello ${name}, welcome back!";
+$greeting = "Hello $name, welcome back!";
+$greeting = "Hello {$name}, welcome back!";
+// 为保持一致，这个形式不允许：
+$greeting = "Hello ${name}, welcome back!";
 ```
 
 ## 字符串连接
@@ -132,26 +132,26 @@ $sql = "SELECT `id`, `name` FROM `people` "
 当用 array 函数声明有索引的数组，在每个逗号的后面间隔空格以提高可读性：
 
 ```php
-    $sampleArray = array(1, 2, 3, 'Zend', 'Studio');
+$sampleArray = array(1, 2, 3, 'Zend', 'Studio');
 ```
 可以用 "array" 声明多行有索引的数组，在每个连续行的开头要用空格填补对齐：
 
 ```php
-    $sampleArray = array(
-        1, 2, 3, 'Zend', 'Studio',
-        $a, $b, $c,
-        56.44, $d, 500
-    );
+$sampleArray = array(
+    1, 2, 3, 'Zend', 'Studio',
+    $a, $b, $c,
+    56.44, $d, 500
+);
 ```
 
 ## 关联数组
 当用声明关联数组，array 我们鼓励把代码分成多行，在每个连续行的开头用空格填补来对齐键和值：
 
 ```php
-    $sampleArray = array(
-        'firstKey'  => 'firstValue',
-        'secondKey' => 'secondValue',
-    );
+$sampleArray = array(
+    'firstKey'  => 'firstValue',
+    'secondKey' => 'secondValue',
+);
 ```
 
 # 类
@@ -169,14 +169,14 @@ $sql = "SELECT `id`, `name` FROM `people` "
 下面是个可接受的类的例子： // 459 9506 － 441 9658 下次从这里开始
 
 ```php
-    /**
-     * Documentation Block Here
-     */
-    class SampleClass
-    {
-        // 类的所有内容
-        // 必需缩进四个空格
-    }
+/**
+ * Documentation Block Here
+ */
+class SampleClass
+{
+    // 类的所有内容
+    // 必需缩进四个空格
+}
 ```
 
 ## 类成员变量
@@ -197,55 +197,55 @@ $sql = "SELECT `id`, `name` FROM `people` "
 下面是可接受的在类中的函数声明的例子：
 
 ```php
+/**
+ * Documentation Block Here
+ */
+class Foo
+{
     /**
      * Documentation Block Here
      */
-    class Foo
+    public function bar()
     {
-        /**
-         * Documentation Block Here
-         */
-        public function bar()
-        {
-            // 函数的所有内容
-            // 必需缩进四个空格
-        }
+        // 函数的所有内容
+        // 必需缩进四个空格
     }
-  注： 传址（Pass-by-reference）是在方法声明中允许的唯一的参数传递机制。
+}
+// 注： 传址（Pass-by-reference）是在方法声明中允许的唯一的参数传递机制。
+/**
+ * Documentation Block Here
+ */
+class Foo
+{
     /**
      * Documentation Block Here
      */
-    class Foo
+    public function bar(&$baz)
+    {}
+}
+// 传址在调用时是严格禁止的。
+// 返回值不能在圆括号中，这妨碍可读性而且如果将来方法被修改成传址方式，代码会有问题。
+/**
+ * Documentation Block Here
+ */
+class Foo
+{
+    /**
+     * WRONG
+     */
+    public function bar()
     {
-        /**
-         * Documentation Block Here
-         */
-        public function bar(&$baz)
-        {}
+        return($this->bar);
     }
-  传址在调用时是严格禁止的。
-  返回值不能在圆括号中，这妨碍可读性而且如果将来方法被修改成传址方式，代码会有问题。
-    /**
-     * Documentation Block Here
-     */
-    class Foo
-    {
-        /**
-         * WRONG
-         */
-        public function bar()
-        {
-            return($this->bar);
-        }
 
-        /**
-         * RIGHT
-         */
-        public function bar()
-        {
-            return $this->bar;
-        }
+    /**
+     * RIGHT
+     */
+    public function bar()
+    {
+        return $this->bar;
     }
+}
 ```
 
 ### 函数和方法的用法
@@ -257,10 +257,10 @@ $sql = "SELECT `id`, `name` FROM `people` "
 带有数组参数的函数，函数的调用可包括 "array" 提示并可以分成多行来提高可读性，同时，书写数组的标准仍然适用：
 
 ```php
-    threeArguments(array(1, 2, 3), 2, 3);
-    threeArguments(array(1, 2, 3, 'Zend', 'Studio',
-                        $a, $b, $c,
-                        56.44, $d, 500), 2, 3);
+threeArguments(array(1, 2, 3), 2, 3);
+threeArguments(array(1, 2, 3, 'Zend', 'Studio',
+                    $a, $b, $c,
+                    56.44, $d, 500), 2, 3);
 ```
 
 # 控制语句
@@ -272,26 +272,26 @@ $sql = "SELECT `id`, `name` FROM `people` "
 前花括号必须和条件语句在同一行，后花括号单独在最后一行，其中的内容用四个空格缩进。
 
 ```php
-    if ($a != 2) {
-        $a = 2;
-    }
+if ($a != 2) {
+    $a = 2;
+}
 ```
 对包括"elseif" 或 "else"的 "if" 语句，和 "if" 结构的格式类似， 下面的例子示例 "if" 语句， 包括 "elseif" 或 "else" 的格式约定：
 
 ```php
-    if ($a != 2) {
-        $a = 2;
-    } else {
-        $a = 7;
-    }
+if ($a != 2) {
+    $a = 2;
+} else {
+    $a = 7;
+}
 
-    if ($a != 2) {
-        $a = 2;
-    } elseif ($a == 3) {
-        $a = 4;
-    } else {
-        $a = 7;
-    }
+if ($a != 2) {
+    $a = 2;
+} elseif ($a == 3) {
+    $a = 4;
+} else {
+    $a = 7;
+}
 ```
 在有些情况下， PHP 允许这些语句不用花括号，但在代码标准里，它们（"if"、 "elseif" 或 "else" 语句）必须使用花括号。
 "elseif" 是允许的但强烈不鼓励，我们支持 "else if" 组合。
@@ -302,16 +302,16 @@ $sql = "SELECT `id`, `name` FROM `people` "
 "switch" 里的代码必须有四个空格缩进，在"case"里的代码再缩进四个空格。
 
 ```php
-    switch ($numPeople) {
-        case 1:
-            break;
+switch ($numPeople) {
+    case 1:
+        break;
 
-        case 2:
-            break;
+    case 2:
+        break;
 
-        default:
-            break;
-    }
+    default:
+        break;
+}
 ```
 switch 语句应当有 default。
 
@@ -385,6 +385,7 @@ switch 语句应当有 default。
 2. 二元操作符左右都留空.
 3. 函数参数之间的,右边留空.
 4. if/else 条件分支中,哪怕只有一行代码,也应该用 {} 来分块.
+5. 开发环境将错误报告设置到最高,有效扼制低级 bug.
 
 ```php
 $pos = strpos($uri, '?');
