@@ -42,7 +42,6 @@ https://code.google.com/p/huhamhire-hosts
 https://github.com/dualface/quick-cocos2d-x
 https://github.com/FRiCKLE/ngx_cache_purge
 https://github.com/FRiCKLE/ngx_postgres
-https://github.com/google/gumbo-parser
 https://github.com/DNSPod
 https://github.com/hxy060799/PlaneWar   # cocos2d 高仿微信打飞机
 https://github.com/CoryG89/MDNJump  # chrome 插件
@@ -75,3 +74,7 @@ https://github.com/laravel/laravel  # php 开发框架
 https://github.com/phalcon/cphalcon # c 写的 php 扩展级的开发框架
 https://github.com/ErikDubbelboer/phpRedisAdmin # Redis管理工具之phpRedisAdmin
 https://github.com/cocos2d/cocos-docs # 翻译的游戏开发相关文章.
+https://github.com/Seldaek/monolog # php 开源日志库
+https://github.com/tracy-e/OCGumbo # oc 的 html dom 解析库,封装自 google 的 gumbo-parser
+https://github.com/google/gumbo-parser # google 的 html dom 解析库
+https://github.com/matyhtf/swoole # PHP's asynchronous & concurrent & distributed networking framework.
