@@ -33,6 +33,8 @@
     ci = commit
     co = checkout
     st = status
+    # 查看远程分支,远程分支会用红色表示出来
+    ba = branch -a
     bv = branch -v
     bm = branch -m
     bd = branch -d
@@ -43,6 +45,7 @@
     mg = merge
     df = diff
     rv = remote -v
+    rso= remote show origin
 
     # 'git add -u' 只包含刪除的檔案,不包含新增檔案
     # 'git add .' 包含修改和新增的檔案,但是不包含刪除
