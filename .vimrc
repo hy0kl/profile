@@ -1,5 +1,9 @@
 syntax on
+
+" 解决 vim 无法使用退格键删除
 set nocompatible
+set backspace=indent,eol,start
+
 set number
 set autoindent
 "set smartindent
