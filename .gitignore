@@ -3,6 +3,8 @@ LICENSE.txt
 README.txt
 demos/
 extras/documentation
+.DS_Store
+.htaccess
 *.o
 *~
 *.swp
@@ -10,3 +12,4 @@ extras/documentation
 *.dSYM
 a.out
 tags
+favicon.ico
