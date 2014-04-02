@@ -13,8 +13,8 @@
      diff   = auto
      status = true
      branch = auto
-     interactive = auto;
-     ui = auto;
+     interactive = auto
+     ui = true
 
  [status]
      submodulesummary = -1
