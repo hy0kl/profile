@@ -71,15 +71,17 @@ http://opencv.org/ # 图像识别
 https://github.com/arut/nginx-rtmp-module   # 战斗民族俄罗斯人民开发的一款NGINX的流媒体插件
 https://github.com/twitter/twemproxy    # 缓存代理
 https://github.com/ReactiveCocoa/ReactiveCocoa # 函数响应式编程框架
-https://github.com/laravel/laravel  # php 开发框架
 https://github.com/phalcon/cphalcon # c 写的 php 扩展级的开发框架
 https://github.com/ErikDubbelboer/phpRedisAdmin # Redis管理工具之phpRedisAdmin
 https://github.com/cocos2d/cocos-docs # 翻译的游戏开发相关文章.
 https://github.com/Seldaek/monolog # php 开源日志库
 https://github.com/tracy-e/OCGumbo # oc 的 html dom 解析库,封装自 google 的 gumbo-parser
 https://github.com/google/gumbo-parser # google 的 html dom 解析库
+# Swoole是一个PHP的C扩展，可用来开发PHP的高性能高并发TCP/UDP Server。Swoole的网络IO部分基于epoll/kqueue事件循环，是全异步非阻塞的。 业务逻辑部分使用多进程同步阻塞方式来运行。这样既保证了Server能够应对高并发和大量TCP连接。又保证业务代码仍然可以简单的编写。
 https://github.com/matyhtf/swoole # PHP's asynchronous & concurrent & distributed networking framework.
 https://github.com/astaxie/build-web-application-with-golang #《Go Web 编程》
 https://github.com/doxygen/doxygen # 文档生成工具
 https://github.com/PHPOffice/PHPWord # php 操作 word 文档工具
 https://github.com/PHPOffice/PHPExcel # php 操作 excel 文档工具
+https://github.com/dodgepudding/wechat-php-sdk # 微信公众平台php开发包, weixin developer SDK
+http://nginx.org/en/docs/http/ngx_http_spdy_module.html # nginx spdy 协议实现
