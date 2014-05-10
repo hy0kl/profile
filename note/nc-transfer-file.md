@@ -1,4 +1,6 @@
 # 使用 nc 传输文件
+
+```
 1. 在远程服务器上
 $ sudo /etc/init.d/iptables stop
 $ nc -l 54321 > 传输文件目标名
@@ -15,3 +17,4 @@ $ nc -l 54321 | tar zxvf -
 
 发送端:
 $ tar zcf - nginx | nc 192.168.3.201 54321
+```
