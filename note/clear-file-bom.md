@@ -1,6 +1,8 @@
-linux下查找包含BOM头的文件和清除BOM头命令
-[http://blog.sina.com.cn/s/blog_49f914ab0101eyjj.html]
+# linux下查找包含BOM头的文件和清除BOM头命令
 
+[FROM](http://blog.sina.com.cn/s/blog_49f914ab0101eyjj.html)
+
+```
 查找包含BOM头的文件，命令如下：
 
 grep -r -I -l $'^\xEF\xBB\xBF' ./
@@ -16,4 +18,5 @@ grep -r -I -l $'^\xEF\xBB\xBF' /path | xargs sed -i 's/^\xEF\xBB\xBF//;q'
 
  find . -type f   -exec  sed -i 's/\xEF\xBB\xBF//' {} \;
 
- 这个命令会把当前目录及所有子目录下的BOM头删除掉。
+这个命令会把当前目录及所有子目录下的BOM头删除掉。
+```
