@@ -8,6 +8,10 @@
 
 [diff]
     renames = copy
+    tool    = vimdiff
+
+[difftool]
+    prompt  = no
 
 [color]
      diff   = auto
@@ -68,6 +72,9 @@
     unstage  = reset HEAD
     uncommit = reset --soft HEAD^
     amend    = commit --amend
+
+    # 使用 vimdiff 查看 diff 文件
+    vdf = difftool
 
 [core]
     # 对 0x80以上的字符不进行quote,以正常显示中文

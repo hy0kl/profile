@@ -22,6 +22,7 @@ alias ll='ls -lG'
 alias la='ls -GAalth'
 alias l='ls -GCF'
 alias lt='ls -Glth'
+alias tf='tail -f'
 alias grep='grep --color=auto'
 alias tree='tree -C'
 alias md5sum='md5 -r'
@@ -73,7 +74,9 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 PAGER='less -X -M' 
 export LESS=' -R '
 
+export SVN_EDITOR=vim
 export EDITOR=vim
+
 export PATH=$HOME/local/bin:/usr/local/mysql/bin:$PATH
 
 # some function
