@@ -171,3 +171,6 @@ export DYLD_FALLBACK_LIBRARY_PATH
 
 #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[00m\]\[\033[31;40m\]@\[\033[00m\]\[\033[36;40m\]\h\[\033[00m\]:\[\033[35;40m\]\w\[\033[00m\]\$ '
 PS1="\[\033[01;32m\]\[\033[00m\]\[\033[31;40m\]@\[\033[00m\]\[\033[36;40m\]\h\[\033[00m\]:\[\033[35;40m\]\w\[\033[00m\]$yellow\$git_branch$white\$ $normal"
+
+# 加入 git  自动补齐
+source /Users/hy0kl/profile/local/git-completion.bash 
