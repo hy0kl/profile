@@ -1,6 +1,6 @@
-# 问题
+# 问题描述
 
-新建远程分支后
+新建并推送了远程分支后
 ```
 develop$ git pull
 You asked me to pull without telling me which branch you
@@ -24,7 +24,7 @@ use something like the following in your configuration file:
 See git-config(1) for details.
 ```
 
-解决方法:
+# 解决方法:
 
 ```
 $ git config --global branch.master.remote origin
@@ -32,4 +32,12 @@ $ git config --global branch.master.merge refs/heads/master
 
 develop$ git branch --set-upstream develop origin/develop
 Branch develop set up to track remote branch develop from origin.
+```
+
+.git/config 配置文件会加入以下内容:
+
+```
+[branch "develop"]
+    remote = origin
+    merge = refs/heads/develop
 ```
