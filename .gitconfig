@@ -20,13 +20,13 @@
      interactive = auto
      ui = true
 
- [status]
-     submodulesummary = -1
+[status]
+    submodulesummary = -1
 
- [format]
-     numbered = auto
+[format]
+    numbered = auto
 
- [alias]
+[alias]
     sed  = !git ls-files --stage | grep ^100 | awk '{print $4}' | xargs sed $@
     who  = shortlog -n -s --no-merges
     stat = status
@@ -80,3 +80,7 @@
     # 对 0x80以上的字符不进行quote,以正常显示中文
     quotepath = false
     editor = vim
+
+[branch "master"]
+    remote = origin
+    merge = refs/heads/master
