@@ -40,3 +40,9 @@ URL: ... .git
 ```
 
 再 git branch -a 查看.搞定
+
+# 如何只克隆git仓库中的一个分支？
+
+```
+$ git clone -b <branch> <remote_repo>
+```
