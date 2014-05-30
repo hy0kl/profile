@@ -89,3 +89,5 @@ http://nginx.org/en/docs/http/ngx_http_spdy_module.html # nginx spdy 协议实�
 http://www.mantisbt.org/ # 开源 bugs 系统
 http://zookeeper.apache.org/ # 分布式服务框架 Zookeeper -- 管理分布式环境中的数据
 https://github.com/git/git # git 源码
+https://github.com/zeromq
+https://github.com/zeromq/libzmq # 消息队列
