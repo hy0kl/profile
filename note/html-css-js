@@ -14,3 +14,7 @@ html 代码
 <iframe name='hidden_frame' id="hidden_frame" style='display:none'></iframe>   
 </body>   
 </html>
+
+2. 实现动态的 icon
+<link rel="shortcut icon" href="data:image/png;base64,base64-content" type="image/png">
+通过异步改变 href 里面的值即可实现
