@@ -46,3 +46,13 @@ URL: ... .git
 ```
 $ git clone -b <branch> <remote_repo>
 ```
+
+# windows warning: CRLF will be replaced by LF.
+
+参考: [1](http://stackoverflow.com/questions/17628305/windows-git-warning-lf-will-be-replaced-by-crlf-is-that-warning-tail-backwar) [2](http://blog.csdn.net/feng88724/article/details/11600375)
+
+解决:
+
+```
+$ git config --global core.autocrlf false
+```
