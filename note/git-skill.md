@@ -102,3 +102,19 @@ $ git config --global core.autocrlf input
 
 $ git config --global core.autocrlf false
 ```
+
+# git push force 以后应该如何 pull 呢
+
+[参考一](https://ruby-china.org/topics/5163)
+
+```
+$ git fetch origin
+$ git reset --hard origin/master
+```
+
+[参考二](http://stackoverflow.com/questions/1125968/force-git-to-overwrite-local-files-on-pull)
+
+```
+$ git fetch --all
+$ git reset --hard origin/master
+```
