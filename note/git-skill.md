@@ -118,3 +118,11 @@ $ git reset --hard origin/master
 $ git fetch --all
 $ git reset --hard origin/master
 ```
+
+# git 拉取远程分支
+
+[参考](http://git-scm.com/book/zh/Git-%E5%88%86%E6%94%AF-%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF)
+
+```
+$ git checkout --track origin/remote-branch
+```
