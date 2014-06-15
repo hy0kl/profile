@@ -93,3 +93,5 @@ http://zookeeper.apache.org/ # 分布式服务框架 Zookeeper -- 管理分布�
 https://github.com/git/git # git 源码
 https://github.com/zeromq
 https://github.com/zeromq/libzmq # 消息队列
+https://code.google.com/p/friso/ # C语言开源高性能中文分词组件，C语言mmseg中文分词器
+
