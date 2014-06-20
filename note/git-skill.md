@@ -1,3 +1,22 @@
+# 查看远程分支
+
+[FROM](http://zengrong.net/post/1746.htm)
+
+加上-a参数可以查看远程分支，远程分支会用红色表示出来（如果你开了颜色支持的话）：
+
+```
+# git branch -a
+  master
+  remote
+  tungway
+  v1.52
+* zrong
+  remotes/origin/master
+  remotes/origin/tungway
+  remotes/origin/v1.52
+  remotes/origin/zrong
+```
+
 # 删除在本地有但在远程库中已经不存在的分支
 
 [FROM](http://blog.csdn.net/xhl_will/article/details/8450193)
