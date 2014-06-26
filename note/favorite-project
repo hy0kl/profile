@@ -24,7 +24,7 @@ https://github.com/haiwen/seafile
 https://github.com/walmartlabs  # http://walmartlabs.com/
 https://github.com/alexdantas/yetris
 https://github.com/alacner/lua-mysql
-https://github.com/efelix/lua-cjson
+https://github.com/efelix/lua-cjson # Fast JSON parsing and encoding support for Lua
 https://code.google.com/p/zopfli/
 https://github.com/keplerproject/luasql
 https://github.com/libgdx/libgdx    # java 游戏引擎
@@ -95,3 +95,8 @@ https://github.com/zeromq
 https://github.com/zeromq/libzmq # 消息队列
 https://code.google.com/p/friso/ # C语言开源高性能中文分词组件，C语言mmseg中文分词器
 https://github.com/mishoo/UglifyJS # js 代码压缩,混淆
+https://github.com/youtube/vitess # go 语言的 mysql proxy
+https://github.com/brucexx/heisenberg # 百度 dbproxy 的部分源代码, java 版
+http://www.tildeslash.com/libzdb/ # A small, easy to use Open Source Database Connection Pool Library
+https://github.com/anjuke/php-mmseg # php 中文分词器
+
