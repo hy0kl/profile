@@ -31,3 +31,9 @@ https://code.google.com/p/fastdfs # FastDFS是一款类GoogleFS的开源分布�
 
 # The Doctrine Project is the home to several PHP libraries primarily focused on database storage and object mapping.
 http://www.doctrine-project.org/
+
+# 带有详细注释的 Redis 3.0 代码（annotated Redis 3.0 source code）
+https://github.com/huangz1990/redis-3.0-annotated
+
+# Find out available google ips
+https://github.com/PeerXu/google-ip-explorer
