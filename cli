@@ -48,6 +48,8 @@ openssl openssl-devel
 libgd3 libgd-dev
 libvpx-dev libxpm-dev
 libmysqlclient-dev libmysqld-dev
+libmemcached libmemcached-dev
+imagemagick re2c libmagickwand-dev libmagickcore-dev
 2). 编译参数指定
 $ ./configure --prefix=/home/work/php --enable-fpm  \
 --enable-bcmath --enable-ftp \
@@ -61,6 +63,7 @@ $ ./configure --prefix=/home/work/php --enable-fpm  \
 --with-pcre-dir=/usr \
 --with-zlib=/usr \
 --with-bz2=/usr \
+--with-mcrypt=/usr \
 --with-gd=/usr \
 --with-vpx-dir=/usr \
 --with-xpm-dir=/usr \
