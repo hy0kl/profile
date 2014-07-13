@@ -72,3 +72,10 @@ $ ./configure --prefix=/home/work/php --enable-fpm  \
 --with-mysql=/usr \
 --with-mysqli=/usr/bin/mysql_config \
 --with-pdo-mysql=/usr/bin/mysql_config
+
+9. 安装 gitlab 后js/css错乱
+$ cd /home/git/gitlab
+$ sudo -u git RAILS_ENV=production bundle exec rake assets:clean assets:precompile
+
+10. 安装 gitlab 后页面访问 502 问题
+修改 /home/git/gitlab/config/unicorn.rb 文件,增加 timeout 的值, 300 OK.
