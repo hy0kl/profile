@@ -124,6 +124,7 @@ $ ./configure --prefix=/usr --mandir=/usr/share/man \
 --enable-sysvsem \
 --enable-sysvshm \
 --with-tidy \
+--with-curl= /usr \
 --enable-wddx \
 --with-xmlrpc \
 --with-iconv-dir=/usr \
