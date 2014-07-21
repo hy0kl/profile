@@ -162,7 +162,8 @@ export LIBRARY_PATH
 LD_RUN_PATH=$HOME/local/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/usr/sbin:/sbin
 export LD_RUN_PATH
 
-DYLD_LIBRARY_PATH=$HOME/local/lib:/usr/local/lib:/usr/local/mysql/lib
+# 在 mac 容易出问题，尤其在 jpeg/png 的多版本情况下
+DYLD_LIBRARY_PATH=$HOME/local/lib:/usr/local/mysql/lib
 export DYLD_LIBRARY_PATH
 
 DYLD_FALLBACK_LIBRARY_PATH=/opt/local/lib:/usr/lib
