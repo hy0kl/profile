@@ -129,3 +129,6 @@ map <F5> <Esc>:DoxAuthor<cr>
 " Copyright
 map <F6> <Esc>:DoxLic<cr>
 
+" vim tabs conf
+map <F7> :tabp <CR>
+map <F8> :tabn <CR>
