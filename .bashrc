@@ -25,7 +25,6 @@ alias lt='ls -Glth'
 alias tf='tail -f'
 alias grep='grep --color=auto'
 alias tree='tree -C'
-alias md5sum='md5 -r'
 alias cdiff='~/local/colordiff/colordiff.pl | less -R'
 alias rscp='rsync -v -P -e ssh'
 
