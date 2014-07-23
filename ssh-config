@@ -1,0 +1,5 @@
+Host *
+ControlMaster auto
+ControlPath /tmp/%r@%h:%p
+ServerAliveInterval 60
+ConnectTimeout 4h
