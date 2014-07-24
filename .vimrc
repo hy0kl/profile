@@ -132,3 +132,15 @@ map <F6> <Esc>:DoxLic<cr>
 " vim tabs conf
 map <F7> :tabp <CR>
 map <F8> :tabn <CR>
+" 改变浏览的启动目录
+set browsedir=current
+
+" 分割窗口时保持相等的宽/高
+set equalalways
+
+" The NERD tree : A tree explorer plugin for navigating the filesystem
+map <F9> :NERDTreeToggle<CR>
+imap <F9> <ESC>:NERDTreeToggle<CR>
+"启动Vim时自动打开nerdtree
+"autocmd VimEnter * NERDTree
+let NERDTreeIgnore=['^cscope', '^tags$']
