@@ -111,3 +111,5 @@ https://github.com/altercation/solarized # vim 配色
 https://github.com/tomasr/molokai # vim 配色
 https://github.com/msva/lua-curl # lua curl c 扩展
 http://ittner.github.io/lua-iconv/ # lua iconv c 扩展
+https://github.com/diegonehab/luasocket # lua socket 扩展
+https://github.com/Neeke/SeasLog # php 扩展级的日志库
