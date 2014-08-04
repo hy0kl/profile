@@ -109,7 +109,9 @@ https://github.com/scrapy/scrapy # Scrapy, a fast high-level screen scraping and
 https://github.com/makinacorpus/spynner # Programmatic web browsing module with AJAX support for Python
 https://github.com/altercation/solarized # vim 配色
 https://github.com/tomasr/molokai # vim 配色
-https://github.com/msva/lua-curl # lua curl c 扩展
+https://github.com/msva/lua-curl # lua curl c 扩展, easy, multi, share
 http://ittner.github.io/lua-iconv/ # lua iconv c 扩展
 https://github.com/diegonehab/luasocket # lua socket 扩展
 https://github.com/Neeke/SeasLog # php 扩展级的日志库
+https://github.com/cloudflare/lua-resty-cookie # nginx_lua 操作 cookie
+https://github.com/nicolasff/webdis # Redis的Web代理
