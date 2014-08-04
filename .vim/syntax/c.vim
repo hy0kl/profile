@@ -278,6 +278,7 @@ syn keyword cFunctions close creat dup dup2 fcntl flock fsync lseek mkstemp open
 syn keyword cFunctions clearerr fclose fdopen feof fflush fgetc fgets fileno fopen fputc fputs fread freopen fseek ftell fwrite getc getchar gets mktemp putc putchar rewind setbuf setbuffer setlinebuf setvbuf ungetc
 syn keyword cFunctions atexit execl execlp execv execve execvp exit _exit vfork getpgid getpgrp getpid getppid getpriority nice on_exit setpgid setpgrp setpriority system wait waitpid fprintf fscanf printf sacnf sprintf sscanf vfprintf vfscanf vprintf vscanf vsprintf vsscanf printf snprintf
 syn keyword cFunctions setsid tcgetpgrp tcsetpgrp compat
+syn keyword cFunctions getrlimit setrlimit
 syn keyword cFunctions access alphasort chdir chmod chown chroot closedir fchdir fchmod fchown fstat ftruncate getcwd link lstat opendir readdir readlink remove rename rewinddir seekdir stat symlink telldir truncate umask unlink utime utimes
 syn keyword cFunctions alarm kill pause sigaction sigaddset sigdelset sigemptyset sigfillset sigismember signal sigpending sigprocmask sleep ferror perror strerror mkfifo pclose pipe popen
 syn keyword cFunctions accept bind connect endprotoent endservent getsockopt htonl htons inet_addr inet_aton inet_ntoa listen ntohl ntohs recv recvfrom recvmsg send sendmsg sendto setprotoent setservent setsockopt shutdown socket
