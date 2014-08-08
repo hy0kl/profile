@@ -109,7 +109,7 @@ highlight Pmenu ctermbg=magenta
 "match OverLength /\%81v.\+/
 
 "仅检测PHP语法
-autocmd FileType php map <F2> :!~/php/bin/php -l %<cr>
+autocmd FileType php map <F2> :!~/work/php/bin/php -l %<cr>
 
 " JSON 语法
 au! BufRead,BufNewFile *.json set filetype=json
