@@ -282,8 +282,9 @@ syn keyword cFunctions getrlimit setrlimit
 syn keyword cFunctions getitimer setitimer
 syn keyword cFunctions access alphasort chdir chmod chown chroot closedir fchdir fchmod fchown fstat ftruncate getcwd link lstat opendir readdir readlink remove rename rewinddir seekdir stat symlink telldir truncate umask unlink utime utimes
 syn keyword cFunctions alarm kill pause sigaction sigaddset sigdelset sigemptyset sigfillset sigismember signal sigpending sigprocmask sleep ferror perror strerror mkfifo pclose pipe popen
-syn keyword cFunctions accept bind connect endprotoent endservent getsockopt htonl htons inet_addr inet_aton inet_ntoa listen ntohl ntohs recv recvfrom recvmsg send sendmsg sendto setprotoent setservent setsockopt shutdown socket
+syn keyword cFunctions accept bind connect endprotoent endservent getsockopt htonl htons inet_addr inet_aton inet_ntoa listen ntohl ntohs recv recvfrom recvmsg send sendmsg sendto setprotoent setservent setsockopt shutdown socket inet_ntop inet_lnaof inet_makeaddr inet_netof inet_network inet_ntoa_r inet_pton
 syn keyword cFunctions getsockname
+syn keyword cFunctions getpeername
 syn keyword cFunctions getenv putenv setenv
 syn keyword cFunctions assert
 syn keyword cFunctions va_start va_arg va_copy va_end

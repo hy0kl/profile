@@ -12,6 +12,8 @@ set ts=4
 set shiftwidth=4
 " 高亮当前行
 set cursorline
+"hi cursorline   cterm=NONE ctermbg=lightgray ctermfg=NONE
+hi cursorline   cterm=NONE ctermbg=234 ctermfg=NONE
 " 保存文件时不要生成备份文件
 set nobackup
 " just for encode
