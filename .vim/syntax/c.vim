@@ -267,7 +267,7 @@ endif
 
 " add by hy0kl for hilight c functions #2012.11.29
 syn keyword cFunctions isalnum isalpha isascii iscntrl isdigit isgraphis islower isprint isspace ispunct isupper isxdigit
-syn keyword cFunctions atof atoi atol gcvt strtod strtol strtoul toascii tolower toupper
+syn keyword cFunctions atof atoi atol gcvt strtod strtol strtoul strtoll strtoq strtoimax toascii tolower toupper
 syn keyword cFunctions calloc free getpagesize malloc mmap munmap
 syn keyword cFunctions asctime ctime gettimeofday gmtime localtime mktime settimeofday time
 syn keyword cFunctions bcmp bcopy bzero index memccpy memchr memcmp memcpy memmove memset rindex strcasecmp strcat strchr strcmp strcoll strcpy strcspn strdup strlen strncasecmp strncat strncpy strpbrk strrchr strspn strstr strtok
@@ -279,6 +279,7 @@ syn keyword cFunctions clearerr fclose fdopen feof fflush fgetc fgets fileno fop
 syn keyword cFunctions atexit execl execlp execv execve execvp exit _exit vfork getpgid getpgrp getpid getppid getpriority nice on_exit setpgid setpgrp setpriority system wait waitpid fprintf fscanf printf sacnf sprintf sscanf vfprintf vfscanf vprintf vscanf vsprintf vsscanf printf snprintf
 syn keyword cFunctions setsid tcgetpgrp tcsetpgrp compat
 syn keyword cFunctions getrlimit setrlimit
+syn keyword cFunctions getitimer setitimer
 syn keyword cFunctions access alphasort chdir chmod chown chroot closedir fchdir fchmod fchown fstat ftruncate getcwd link lstat opendir readdir readlink remove rename rewinddir seekdir stat symlink telldir truncate umask unlink utime utimes
 syn keyword cFunctions alarm kill pause sigaction sigaddset sigdelset sigemptyset sigfillset sigismember signal sigpending sigprocmask sleep ferror perror strerror mkfifo pclose pipe popen
 syn keyword cFunctions accept bind connect endprotoent endservent getsockopt htonl htons inet_addr inet_aton inet_ntoa listen ntohl ntohs recv recvfrom recvmsg send sendmsg sendto setprotoent setservent setsockopt shutdown socket
@@ -289,6 +290,8 @@ syn keyword cFunctions va_start va_arg va_copy va_end
 syn keyword cFunctions gethostname sethostname
 syn keyword cFunctions getopt isatty select ttyname
 syn keyword cFunctions setlocale
+syn keyword cFunctions sysconf
+syn keyword cFunctions closelog openlog setlogmask syslog vsyslog
 syn keyword cFunctions strftime strftime_l
 syn keyword cFunctions pthread_atfork pthread_attr_destroy pthread_attr_getdetachstate pthread_attr_getguardsize pthread_attr_getinheritsched pthread_attr_getschedparam pthread_attr_getschedpolicy pthread_attr_getscope pthread_attr_getstack pthread_attr_getstackaddr pthread_attr_getstacksize pthread_attr_init pthread_attr_setdetachstate pthread_attr_setguardsize pthread_attr_setinheritsched pthread_attr_setschedparam pthread_attr_setschedpolicy pthread_attr_setscope pthread_attr_setstack pthread_attr_setstackaddr pthread_attr_setstacksize pthread_cancel pthread_cond_broadcast pthread_cond_destroy pthread_cond_init pthread_condattr_t pthread_cond_signal pthread_cond_timedwait pthread_cond_wait pthread_condattr_destroy pthread_condattr_init pthread_condattr_getpshared pthread_condattr_setpshared pthread_create pthread_attr_t pthread_detach pthread_equal pthread_exit pthread_getconcurrency pthread_getschedparam pthread_getspecific pthread_join pthread_key_create pthread_key_delete pthread_mutex_destroy pthread_mutex_getprioceiling pthread_mutex_init pthread_mutex_lock pthread_mutex_setprioceiling pthread_mutex_trylock pthread_mutex_unlock pthread_mutexattr_destroy pthread_mutexattr_getprioceiling pthread_mutexattr_getprotocol pthread_mutexattr_getpshared pthread_mutexattr_gettype pthread_mutexattr_init pthread_mutexattr_setprioceiling pthread_mutexattr_setprotocol pthread_mutexattr_setpshared pthread_mutexattr_settype pthread_once pthread_rwlock_destroy pthread_rwlock_init pthread_rwlock_rdlock pthread_rwlock_tryrdlock pthread_rwlock_trywrlock pthread_rwlock_wrlock pthread_rwlock_unlock pthread_rwlockattr_destroy pthread_rwlockattr_getpshared pthread_rwlockattr_init pthread_rwlockattr_setpshared pthread_self pthread_setcancelstate pthread_setcanceltype pthread_setconcurrency pthread_setschedparam pthread_setspecific pthread_testcancel pthread_is_threaded_np pthread_threadid_np pthread_getname_np pthread_setname_np pthread_main_np pthread_mach_thread_np pthread_get_stacksize_np pthread_cond_signal_thread_np pthread_cond_timedwait_relative_np pthread_create_suspended_np pthread_attr_t pthread_kill pthread_from_mach_thread_np pthread_sigmask pthread_yield_np
 
@@ -392,7 +395,7 @@ hi def link cCppOut2		cCppOut
 hi def link cCppOut		Comment
 
 " by hy0kl
-hi def link cFunctions Function 
+hi def link cFunctions Function
 
 let b:current_syntax = "c"
 

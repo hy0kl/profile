@@ -115,3 +115,4 @@ https://github.com/diegonehab/luasocket # lua socket 扩展
 https://github.com/Neeke/SeasLog # php 扩展级的日志库
 https://github.com/cloudflare/lua-resty-cookie # nginx_lua 操作 cookie
 https://github.com/nicolasff/webdis # Redis的Web代理
+https://github.com/ideawu/ssdb # 一个高性能的支持丰富数据结构的 NoSQL 数据库, 用于替代 Redis.
