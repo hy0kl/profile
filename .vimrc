@@ -146,3 +146,4 @@ imap <F9> <ESC>:NERDTreeToggle<CR>
 "启动Vim时自动打开nerdtree
 "autocmd VimEnter * NERDTree
 let NERDTreeIgnore=['^cscope', '^tags$']
+

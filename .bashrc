@@ -12,6 +12,9 @@ export HISTCONTROL=ignoredups
 # update the values of LINES and COLUMNS.
 #shopt -s checkwinsize
 
+# set encode
+export LANG=en_US.UTF-8
+
 ### alias ###
 # svn
 alias svn-st='svn st | grep ^M'
@@ -27,6 +30,7 @@ alias grep='grep --color=auto'
 alias tree='tree -C'
 alias cdiff='~/local/colordiff/colordiff.pl | less -R'
 alias rscp='rsync -v -P -e ssh'
+alias wget='wget -c'
 
 # alias for git
 alias git-ci='git commit'
