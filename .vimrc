@@ -27,12 +27,6 @@ set hlsearch
 set fdm=indent
 "set completeopt=longest
 
-ab JT <script type="text/javascript" src=""></script>
-ab DC <div class=""></div>
-ab DIC <div id="" class=""></div>
-ab SC <span class=""></span>
-ab SIC <span id="" class=""></span>
-
 " 设置粘贴模式
 "set paste
 
@@ -45,11 +39,10 @@ map <F3> :TlistToggle<CR>
 " 自动补全菜单控制
 set completeopt=longest,menu
 
+" 和 neocomplcache_omni 不冲突,可以共存
 " php 函数补全
 function AddPHPFuncList()
     set dictionary-=~/.vim/tools/php/functions.txt  dictionary+=~/.vim/tools/php/functions.txt
-    " php 文件中也可以补齐 css
-    " set dictionary-=~/.vim/tools/css/css.attr dictionary+=~/.vim/tools/css/css.attr
     set complete-=k complete+=k
 endfunction
 au FileType php call AddPHPFuncList()
@@ -77,9 +70,9 @@ filetype indent on
 
 " 记住上次编辑的位置
 autocmd BufReadPost *
-            \ if line("'\"") > 1 && line("'\"") <= line("$") |
-            \   exe "normal! g'\"" |
-            \ endif
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   exe "normal! g'\"" |
+    \ endif
 
 " 自定义文件模版
 autocmd BufNewFile *.c 0r ~/.vim/template/cconfig.c
@@ -122,6 +115,7 @@ let g:DoxygenToolkit_authorName="hy0kle@gmail.com"
 let g:DoxygenToolkit_licenseTag="\<enter>Copyright (C) Technology LimitedCompany"
 let g:DoxygenToolkit_briefTag_funcName="yes"
 let g:doxygen_enhanced_color=1
+
 "自定义快捷键
 vmap <C-S-P>    dO#endif<Esc>PO#if 0<Esc>
 " 函数注释
@@ -146,4 +140,23 @@ imap <F9> <ESC>:NERDTreeToggle<CR>
 "启动Vim时自动打开nerdtree
 "autocmd VimEnter * NERDTree
 let NERDTreeIgnore=['^cscope', '^tags$']
+
+" 加入超牛代码自动补全功能
+let g:neocomplcache_enable_at_startup = 1
+
+" Enable omni completion.
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+" Enable heavy omni completion.
+if !exists('g:neocomplcache_omni_patterns')
+  let g:neocomplcache_omni_patterns = {}
+endif
+let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
+let g:neocomplcache_omni_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
+let g:neocomplcache_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+
 
