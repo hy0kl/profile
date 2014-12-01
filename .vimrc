@@ -109,6 +109,7 @@ autocmd FileType php map <F2> :!~/work/php/bin/php -l %<cr>
 " JSON 语法
 au! BufRead,BufNewFile *.json set filetype=json
 
+" 友好注释助手
 let g:DoxygenToolkit_paramTag_pre="@param: "
 let g:DoxygenToolkit_returnTag   ="@return: "
 let g:DoxygenToolkit_authorName="hy0kle@gmail.com"
