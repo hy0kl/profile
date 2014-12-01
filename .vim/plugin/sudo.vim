@@ -1,9 +1,9 @@
 "
 "
 "	sudo.vim:  A vim plugin by Rich Paul (vim@rich-paul.net)
-"	
+"
 "	This script eases use of vim with sudo by adding the ability to
-"	edit one file with root privleges without running the whole 
+"	edit one file with root privleges without running the whole
 "	session that way.
 "
 "
@@ -18,7 +18,7 @@
 "	Provides:
 "		URL handler, sudo: scheme
 "		2 autocommands
-"		
+"
 "	Commands:
 "		SudoRead
 "		SudoWrite
@@ -44,7 +44,7 @@ function! SudoRead(url)
 		let file=strpart(file,strlen(prot)+1)
 	endif
 	:0,$d
-	call setline(1,"foo")		
+	call setline(1,"foo")
 	exec '1read !sudo cat "'.file.'" '
 	:1d
 	set nomod
