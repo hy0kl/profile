@@ -26,11 +26,12 @@ alias la='ls -GAalth'
 alias l='ls -GCF'
 alias lt='ls -Glth'
 alias tf='tail -f'
-alias grep='grep --color=auto'
+alias grep='grep --color=always'
 alias tree='tree -C'
 alias cdiff='~/local/colordiff/colordiff.pl | less -R'
 alias rscp='rsync -v -P -e ssh'
 alias wget='wget -c'
+alias sendmail='$HOME/local/sendEmail/sendEmail -f cli_mail@163.com -cc yangyj1@baihe.com -o message-content-type=auto -o message-charset=utf-8 -s smtp.163.com -xu cli_mail@163.com -xp Iwi11ct0'
 
 # alias for git
 alias git-ci='git commit'
@@ -74,7 +75,7 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 #export LESS_TERMCAP_so=$'\E[01;44;33m'
 #export LESS_TERMCAP_ue=$'\E[0m'
 #export LESS_TERMCAP_us=$'\E[01;33m'
-PAGER='less -X -M' 
+PAGER='less -X -M'
 export LESS=' -R '
 
 export SVN_EDITOR=vim
@@ -86,13 +87,13 @@ export PATH=$HOME/local/bin:/usr/local/mysql/bin:$PATH
 function _memtop()
 {
     num=$1
-    if ((num > 0)) 
+    if ((num > 0))
     then
         num=$num
     else
         num=30
-    fi  
-    ps aux | sort -k4nr | head  -n $num    
+    fi
+    ps aux | sort -k4nr | head  -n $num
 }
 alias memtop=_memtop
 
@@ -178,4 +179,7 @@ export DYLD_LIBRARY_PATH
 PS1="\[\033[01;32m\]\[\033[00m\]\[\033[31;40m\]@\[\033[00m\]\[\033[36;40m\]\h\[\033[00m\]:\[\033[35;40m\]\w\[\033[00m\]$yellow\$git_branch$white\$ $normal"
 
 # 加入 git  自动补齐
-source /Users/hy0kl/profile/local/git-completion.bash 
+if [[ -f "$HOME/profile/local/git-completion.bash" ]]; then
+    source $HOME/profile/local/git-completion.bash
+fi
+
