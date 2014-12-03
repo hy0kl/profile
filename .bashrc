@@ -31,7 +31,7 @@ alias tree='tree -C'
 alias cdiff='~/local/colordiff/colordiff.pl | less -R'
 alias rscp='rsync -v -P -e ssh'
 alias wget='wget -c'
-alias sendmail='$HOME/local/sendEmail/sendEmail -f cli_mail@163.com -cc yangyj1@baihe.com -o message-content-type=auto -o message-charset=utf-8 -s smtp.163.com -xu cli_mail@163.com -xp Iwi11ct0'
+alias sendmail='$HOME/local/sendEmail/sendEmail -f cli_mail@163.com -o message-content-type=auto -o message-charset=utf-8 -s smtp.163.com -xu cli_mail@163.com -xp Iwi11ct0'
 
 # alias for git
 alias git-ci='git commit'
