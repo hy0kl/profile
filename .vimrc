@@ -143,7 +143,11 @@ imap <F9> <ESC>:NERDTreeToggle<CR>
 let NERDTreeIgnore=['^cscope', '^tags$']
 
 " 加入超牛代码自动补全功能
-let g:neocomplcache_enable_at_startup = 1
+"let g:neocomplcache_enable_at_startup = 1
+" 禁止AutoComplPop
+let g:NeoComplCache_DisableAutoComplete = 1
+" 通过C-X,C-U打开匹配列表
+"let g:SuerTabDefaultCompletionType = '<C-X><C-U>'
 
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
