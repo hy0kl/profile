@@ -23,6 +23,7 @@ set fileformats=unix
 set encoding=utf-8
 " 高亮搜索词
 set hlsearch
+set incsearch
 " set foldmethod
 set fdm=indent
 "set completeopt=longest
@@ -143,9 +144,9 @@ imap <F9> <ESC>:NERDTreeToggle<CR>
 let NERDTreeIgnore=['^cscope', '^tags$']
 
 " 加入超牛代码自动补全功能
-"let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_at_startup = 0
 " 禁止AutoComplPop
-let g:NeoComplCache_DisableAutoComplete = 1
+"let g:NeoComplCache_DisableAutoComplete = 1
 " 通过C-X,C-U打开匹配列表
 "let g:SuerTabDefaultCompletionType = '<C-X><C-U>'
 
