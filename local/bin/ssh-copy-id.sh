@@ -7,7 +7,7 @@
 
 if [[ ! -f "$HOME/.ssh/id_rsa" ]]
 then
-    echo "Please run 'ssh-keygen -t rsa' at first."
+    echo "Please run 'ssh-keygen -t rsa -C your_email@example.com' at first."
     exit
 fi
 
