@@ -4,7 +4,12 @@
 # Takes the remote machine name as an argument.
 # Obviously, the remote machine must accept password authentication,
 # or one of the other keys in your ssh-agent, for this to work.
-echo "Please run 'ssh-keygen -t rsa' at first."
+
+if [[ ! -f "$HOME/.ssh/id_rsa" ]]
+then
+    echo "Please run 'ssh-keygen -t rsa' at first."
+    exit
+fi
 
 ID_FILE="${HOME}/.ssh/id_rsa.pub"
 
