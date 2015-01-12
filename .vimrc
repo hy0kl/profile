@@ -107,9 +107,6 @@ highlight Pmenu ctermbg=magenta
 "仅检测PHP语法
 autocmd FileType php map <F2> :!~/work/php/bin/php -l %<cr>
 
-" JSON 语法
-au! BufRead,BufNewFile *.json set filetype=json
-
 " 友好注释助手
 let g:DoxygenToolkit_paramTag_pre="@param: "
 let g:DoxygenToolkit_returnTag   ="@return: "
@@ -164,9 +161,4 @@ endif
 let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
 let g:neocomplcache_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
-
-" Markdown
-" @see: http://stackoverflow.com/questions/10964681/enabling-markdown-highlighting-in-vim
-au BufRead,BufNewFile *.md set filetype=markdown
-"au BufNewFile,BufRead *.markdown,*.mdown,*.mkd,*.mkdn,README.md  setf markdown
 
