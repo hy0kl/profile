@@ -40,6 +40,11 @@ map <F3> :TlistToggle<CR>
 " 自动补全菜单控制
 set completeopt=longest,menu
 
+" 打开文件时检测文件类型,自动匹配
+filetype on
+filetype plugin on
+filetype indent on
+
 " 和 neocomplcache_omni 不冲突,可以共存
 " php 函数补全
 function AddPHPFuncList()
@@ -63,11 +68,6 @@ endfunction
 au FileType css call AddCssAttrList()
 
 "colorscheme darkblue
-
-" 打开文件时检测文件类型,自动匹配
-filetype on
-filetype plugin on
-filetype indent on
 
 " 记住上次编辑的位置
 autocmd BufReadPost *
@@ -165,4 +165,8 @@ let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
 let g:neocomplcache_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
 
+" Markdown
+" @see: http://stackoverflow.com/questions/10964681/enabling-markdown-highlighting-in-vim
+au BufRead,BufNewFile *.md set filetype=markdown
+"au BufNewFile,BufRead *.markdown,*.mdown,*.mkd,*.mkdn,README.md  setf markdown
 
