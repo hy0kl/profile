@@ -14,7 +14,7 @@ if ($argc < 2)
 $json_str = $argv[1];
 if (strlen($json_str) < 2)
 {
-    echo 'Nedd input data.' . PHP_EOL;
+    echo 'Need input data.' . PHP_EOL;
     exit;
 }
 
