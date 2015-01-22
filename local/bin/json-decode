@@ -1,0 +1,33 @@
+#!/usr/bin/env php
+<?php
+/**
+ * @describe:
+ * @author: Jerry Yang(hy0kle@gmail.com)
+ * */
+if ($argc < 2)
+{
+    echo "Need more argument...\n";
+    echo "Usage: {$argv[0]} method[decode|encode] url\n";
+    exit();
+}
+
+$json_str = $argv[1];
+if (strlen($json_str) < 2)
+{
+    echo 'Nedd input data.' . PHP_EOL;
+    exit;
+}
+
+$json = json_decode($json_str, true);
+
+$last_error = json_last_error();
+if (JSON_ERROR_NONE == $last_error)
+{
+    print_r($json);
+}
+else
+{
+    echo "Last error: {$last_error}; msg: " . json_last_error_msg() . PHP_EOL;
+}
+/* vi:set ts=4 sw=4 et fdm=marker: */
+
