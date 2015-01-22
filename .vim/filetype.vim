@@ -13,3 +13,6 @@ au BufRead,BufNewFile *.md set filetype=markdown
 
 " JSON 语法
 au BufRead,BufNewFile *.json set filetype=json
+
+" go 语法高亮
+au BufRead,BufNewFile *.go set filetype=go
