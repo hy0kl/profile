@@ -6,8 +6,8 @@
  * */
 if ($argc < 2)
 {
-    echo "Need more argument...\n";
-    echo "Usage: {$argv[0]} method[decode|encode] url\n";
+    echo 'Need more argument...' . PHP_EOL;
+    echo "Usage: {$argv[0]} json-string" . PHP_EOL;
     exit();
 }
 
