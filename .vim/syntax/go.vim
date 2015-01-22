@@ -226,7 +226,7 @@ syn keyword     goTodo              contained NOTE
 hi def link     goTodo              Todo
 
 
-" Operators; 
+" Operators;
 if g:go_highlight_operators != 0
 	syn match goOperator /:=/
 	syn match goOperator />=/
@@ -245,20 +245,20 @@ if g:go_highlight_operators != 0
 endif
 hi def link     goOperator					Operator
 
-" Functions; 
+" Functions;
 if g:go_highlight_functions != 0
 	syn match goFunction							/\(func\s\+\)\@<=\w\+\((\)\@=/
 	syn match goFunction							/\()\s\+\)\@<=\w\+\((\)\@=/
 endif
 hi def link     goFunction					Function
 
-" Methods; 
+" Methods;
 if g:go_highlight_methods != 0
 	syn match goMethod								/\(\.\)\@<=\w\+\((\)\@=/
 endif
 hi def link     goMethod						Type
 
-" Structs; 
+" Structs;
 if g:go_highlight_structs != 0
 	syn match goStruct								/\(.\)\@<=\w\+\({\)\@=/
 	syn match goStructDef							/\(type\s\+\)\@<=\w\+\(\s\+struct\s\+{\)\@=/
