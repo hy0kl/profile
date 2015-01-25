@@ -1,0 +1,32 @@
+#!/usr/bin/env php
+<?php
+//print_r(get_extension_funcs('gd'));
+
+$check_gd = get_extension_funcs('gd');
+if (! is_array($check_gd) || ! in_array('imagecreatefromjpeg', $check_gd))
+{
+    echo 'Need gd.' . PHP_EOL;
+    exit;
+}
+
+if ($argc < 3)
+{
+    echo 'Need more argument...' . PHP_EOL;
+    echo "Usage: {$argv[0]} SRC.jpg DST.jpg" . PHP_EOL;
+    exit();
+}
+
+$src = $argv[1];
+$dst = $argv[2];
+
+$im = imagecreatefromjpeg($src);
+if (! $im)
+{
+    echo "Can NOT open src: {$src}" . PHP_EOL;
+    exit();
+}
+
+imageinterlace($im, 1);
+imagejpeg($im, $dst, 100);
+imagedestroy($im);
+
