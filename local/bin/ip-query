@@ -1,0 +1,47 @@
+#!/usr/bin/env php
+<?php
+/**
+ * @describe:
+ * @author: Jerry Yang(hy0kle@gmail.com)
+ * */
+$ip = '';
+
+if ($argc > 1)
+{
+    $ip = $argv[1];
+}
+
+// http://api.map.baidu.com/location/ip?ak=E4805d16520de693a3fe707cdc962045&ip=202.198.16.3&coor=bd09ll
+$timeout = 20;
+$bd_ip_query_api = 'http://api.map.baidu.com/location/ip?ak=%s&ip=%s';
+$bd_ak = 'D9c22d71b68dceb1b57109324a4c45f7';
+
+
+$url = sprintf($bd_ip_query_api, $bd_ak, $ip);
+
+$ch = curl_init();
+
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // 以流式返回,而不是直接输出
+
+
+curl_setopt($ch, CURLOPT_TIMEOUT, $timeout);
+curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout - 10);
+
+$res = curl_exec($ch);
+
+$errno = curl_errno($ch);
+$msg   = curl_error($ch);
+
+if (0 == $errno)
+{
+    print_r(json_decode($res, true));
+}
+else
+{
+    echo "[ERROR] {$errno}: {$msg}" . PHP_EOL;
+}
+
+curl_close($ch);
+/* vi:set ts=4 sw=4 et fdm=marker: */
+
