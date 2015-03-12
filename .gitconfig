@@ -14,11 +14,14 @@
     prompt  = no
 
 [color]
-     diff   = auto
+     diff   = always
      status = true
      branch = auto
      interactive = auto
      ui = true
+
+[color "diff"]
+    meta = magenta black bold
 
 [status]
     submodulesummary = -1
