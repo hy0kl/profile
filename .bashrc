@@ -32,6 +32,7 @@ alias cdiff='~/local/colordiff/colordiff.pl | less -R'
 alias rscp='rsync -v -P -e ssh'
 alias wget='wget -c'
 alias sendmail='$HOME/local/sendEmail/sendEmail -f cli_mail@163.com -o message-content-type=auto -o message-charset=utf-8 -s smtp.163.com -xu cli_mail@163.com -xp Iwi11ct0'
+alias mysql='mysql --auto-rehash'
 
 # alias for git
 alias git-ci='git commit'
@@ -167,8 +168,8 @@ LD_RUN_PATH=$HOME/local/bin:/usr/local/bin:/usr/bin:/usr/sbin:/sbin
 export LD_RUN_PATH
 
 # 在 mac 容易出问题，尤其在 jpeg/png 的多版本情况下
-DYLD_LIBRARY_PATH=$HOME/local/lib:/usr/local/mysql/lib
-export DYLD_LIBRARY_PATH
+#DYLD_LIBRARY_PATH=$HOME/local/lib:/usr/local/mysql/lib
+#export DYLD_LIBRARY_PATH
 
 # 去掉一些旧的支持
 #DYLD_FALLBACK_LIBRARY_PATH=/usr/lib

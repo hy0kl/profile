@@ -31,7 +31,7 @@ else
 fi
 
 date_str=$(date +"%Y-%m-%d")
-transfer_file="php tpl js css"
+transfer_file="php tpl js css html phtml"
 
 cd $work_path
 mkdir -p tmp
