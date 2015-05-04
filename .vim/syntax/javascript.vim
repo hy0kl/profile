@@ -66,6 +66,12 @@ syntax keyword javaScriptGlobalObjects MAX_VALUE MIN_VALUE NaN NEGATIVE_INFINITY
 syntax keyword javaScriptGlobalObjects global ignoreCase lastIndex multiline source compile exec test search match replace
 " add for js  Functions
 syntax keyword javaScriptGlobalObjects decodeURI decodeURIComponent encodeURI encodeURIComponent escape eval getClass isFinite isNaN Number parseFloat parseInt
+" add for JSON
+syntax keyword javaScriptGlobalObjects JSON parse stringify
+" add for console
+syntax keyword javaScriptGlobalObjects console assert clear count debug dir dirxml error group groupCollapsed groupEnd info log markTimeline profile profileEnd table time timeEnd timeStamp timeline timelineEnd trace warn
+" add for js Window
+syntax keyword javaScriptGlobalObjects alert blur clearInterval clearTimeout close confirm createPopup focus moveBy moveTo open print prompt resizeBy resizeTo scrollBy scrollTo setInterval setTimeout
 "}}}
 " Comments {{{
 syntax keyword javaScriptCommentTodo      TODO FIXME XXX TBD contained
