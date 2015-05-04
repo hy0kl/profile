@@ -67,6 +67,13 @@ function AddCssAttrList()
 endfunction
 au FileType css call AddCssAttrList()
 
+" js 函数自动补全
+function AddJsFuncList()
+    set dictionary-=~/.vim/tools/js/javascript.dict dictionary+=~/.vim/tools/js/javascript.dict
+    set complete-=k complete+=k
+endfunction
+autocmd FileType javascript call AddJsFuncList()
+
 "colorscheme darkblue
 
 " 记住上次编辑的位置
@@ -105,7 +112,7 @@ highlight Pmenu ctermbg=magenta
 "match OverLength /\%81v.\+/
 
 "仅检测PHP语法
-autocmd FileType php map <F2> :!~/work/php/bin/php -l %<cr>
+autocmd FileType php map <F2> :!~/php/bin/php -l %<cr>
 
 " 友好注释助手
 let g:DoxygenToolkit_paramTag_pre="@param: "
