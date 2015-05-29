@@ -27,6 +27,9 @@
 *.swo
 *.dSYM
 
+# IDE project
+*.project
+
 # Other
 a.out
 tags
