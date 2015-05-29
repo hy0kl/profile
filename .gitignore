@@ -29,6 +29,7 @@
 
 # IDE project
 *.project
+*.buildpath
 
 # Other
 a.out
