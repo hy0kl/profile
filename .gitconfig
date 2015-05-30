@@ -23,6 +23,12 @@
 [color "diff"]
     meta = magenta black bold
 
+[color "branch"]
+    current  = bold green
+    local    = normal
+    remote   = bold red
+    upstream = bold blue
+
 [status]
     submodulesummary = -1
 

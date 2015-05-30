@@ -1,16 +1,37 @@
-INSTALL.txt
-LICENSE.txt
-README.txt
-demos/
-extras/documentation
-.DS_Store
-.htaccess
+# Object files
 *.o
+*.ko
+*.obj
+*.elf
+
+# Libraries
+*.lib
+*.a
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+.DS_Store
 *~
 *.swp
 *.swo
 *.dSYM
+
+# IDE project
+*.project
+*.buildpath
+
+# Other
 a.out
 tags
 favicon.ico
-.netrwhist

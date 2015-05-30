@@ -98,6 +98,12 @@ function _memtop()
 }
 alias memtop=_memtop
 
+# mac 不支持
+function _straceall {
+    strace $(pidof "${1}" | sed 's/\([0-9]*\)/-p \1/g')
+}
+alias straceall=_straceall
+
 function _urlencode()
 {
     argc=$#
