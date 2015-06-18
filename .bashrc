@@ -86,6 +86,14 @@ export EDITOR=vim
 
 export PATH=$HOME/local/bin:/usr/local/mysql/bin:$PATH
 
+# 生成随机字符串
+function _randpwd
+{
+    str=`date +%s | shasum | base64 | head -c 16`
+    echo $str
+}
+alias randpwd=_randpwd
+
 # some function
 function _memtop()
 {
