@@ -193,7 +193,7 @@ export LD_RUN_PATH
 # end for gcc }
 
 #PS1="\[\033[01;32m\]\[\033[00m\]\[\033[31;40m\]@\[\033[00m\]\[\033[36;40m\]\h\[\033[00m\]:\[\033[35;40m\]\w\[\033[00m\]$yellow\$git_branch$white\$ $normal"
-PS1="${white}[${green}${red}@${cyan}\h${normal}: ${magenta}\w${white}]$yellow\$git_branch$white\$ $normal"
+PS1="${white}[${green}${red}@${cyan}\h${normal}:${magenta}\w${white}]$yellow\$git_branch$white\$ $normal"
 
 # 加入 git  自动补齐
 if [[ -f "$HOME/profile/local/git-completion.bash" ]]; then
