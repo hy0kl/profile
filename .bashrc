@@ -23,10 +23,17 @@ alias svn-st='svn st | grep ^M'
 alias svn-log='svn log -v --limit 5'
 
 # pro
-alias ll='ls -lG'
-alias la='ls -GAalth'
-alias l='ls -GCF'
-alias lt='ls -Glth'
+os=$(uname)
+if [ "Darwin" == $os ]
+then
+    alias ls='ls -G'
+else
+    alias ls='ls --color'
+fi
+alias ll='ls -l'
+alias la='ls -Aalth'
+alias l='ls -CF'
+alias lt='ls -lth'
 alias tf='tail -f'
 alias grep='grep --color=always'
 alias tree='tree -C'
