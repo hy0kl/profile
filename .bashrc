@@ -138,6 +138,12 @@ function _urldecode()
 }
 alias urldecode=_urldecode
 
+function _kgit()
+{
+    ps axu | grep git | grep -v grep | awk '{print $2}' | xargs kill -9
+}
+alias kgit=_kgit
+
 ## Parses out the branch name from .git/HEAD:
 find_git_branch () {
     local dir=. head
