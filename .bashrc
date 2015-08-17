@@ -66,6 +66,11 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
+# bash 升级到4.0后,安装 bash-completion,开启命令参数自动补全
+if [ -f $HOME/local/bash/share/bash-completion/bash_completion ]; then
+    . $HOME/local/bash/share/bash-completion/bash_completion
+fi
+
 # color man
 export LESS_TERMCAP_mb=$'\E[01;31m'
 export LESS_TERMCAP_md=$'\E[01;31m'
