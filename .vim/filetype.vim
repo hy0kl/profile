@@ -16,3 +16,6 @@ au BufRead,BufNewFile *.json set filetype=json
 
 " go 语法高亮
 au BufRead,BufNewFile *.go set filetype=go
+
+" rust 语法高亮
+au BufRead,BufNewFile *.rs set filetype=rust
