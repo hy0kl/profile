@@ -13,7 +13,9 @@ export HISTCONTROL=ignoredups
 #shopt -s checkwinsize
 
 # set encode
+export LANG=C
 export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 ### alias ###
 # svn
@@ -21,10 +23,17 @@ alias svn-st='svn st | grep ^M'
 alias svn-log='svn log -v --limit 5'
 
 # pro
-alias ll='ls -lG'
-alias la='ls -GAalth'
-alias l='ls -GCF'
-alias lt='ls -Glth'
+os=$(uname)
+if [ "Darwin" == $os ]
+then
+    alias ls='ls -G'
+else
+    alias ls='ls --color'
+fi
+alias ll='ls -l'
+alias la='ls -Aalth'
+alias l='ls -CF'
+alias lt='ls -lth'
 alias tf='tail -f'
 alias grep='grep --color=always'
 alias tree='tree -C'
@@ -57,6 +66,11 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
+# bash 升级到4.0后,安装 bash-completion,开启命令参数自动补全
+if [ -f $HOME/local/bash/share/bash-completion/bash_completion ]; then
+    . $HOME/local/bash/share/bash-completion/bash_completion
+fi
+
 # color man
 export LESS_TERMCAP_mb=$'\E[01;31m'
 export LESS_TERMCAP_md=$'\E[01;31m'
@@ -83,6 +97,14 @@ export SVN_EDITOR=vim
 export EDITOR=vim
 
 export PATH=$HOME/local/bin:/usr/local/mysql/bin:$PATH
+
+# 生成随机字符串
+function _randpwd
+{
+    str=`date +%s | shasum | base64 | head -c 16`
+    echo $str
+}
+alias randpwd=_randpwd
 
 # some function
 function _memtop()
@@ -127,6 +149,12 @@ function _urldecode()
     fi
 }
 alias urldecode=_urldecode
+
+function _kgit()
+{
+    ps axu | grep git | grep -v grep | awk '{print $2}' | xargs kill -9
+}
+alias kgit=_kgit
 
 ## Parses out the branch name from .git/HEAD:
 find_git_branch () {
@@ -182,8 +210,8 @@ export LD_RUN_PATH
 #export DYLD_FALLBACK_LIBRARY_PATH
 # end for gcc }
 
-#PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[00m\]\[\033[31;40m\]@\[\033[00m\]\[\033[36;40m\]\h\[\033[00m\]:\[\033[35;40m\]\w\[\033[00m\]\$ '
-PS1="\[\033[01;32m\]\[\033[00m\]\[\033[31;40m\]@\[\033[00m\]\[\033[36;40m\]\h\[\033[00m\]:\[\033[35;40m\]\w\[\033[00m\]$yellow\$git_branch$white\$ $normal"
+#PS1="\[\033[01;32m\]\[\033[00m\]\[\033[31;40m\]@\[\033[00m\]\[\033[36;40m\]\h\[\033[00m\]:\[\033[35;40m\]\w\[\033[00m\]$yellow\$git_branch$white\$ $normal"
+PS1="${white}[${green}${red}@${cyan}\h${normal}:${magenta}\w${white}]$yellow\$git_branch$white\$ $normal"
 
 # 加入 git  自动补齐
 if [[ -f "$HOME/profile/local/git-completion.bash" ]]; then

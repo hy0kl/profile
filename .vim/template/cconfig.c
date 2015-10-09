@@ -19,7 +19,6 @@
 #include <errno.h>
 #include <err.h>
 #include <getopt.h>
-#include <sys/types.h>
 #include <sys/time.h>
 #include <sys/queue.h>
 #include <sys/types.h>
