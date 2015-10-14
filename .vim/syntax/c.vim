@@ -270,7 +270,7 @@ syn keyword cFunctions isalnum isalpha isascii iscntrl isdigit isgraphis islower
 syn keyword cFunctions atof atoi atol gcvt strtod strtol strtoul strtoll strtoq strtoimax toascii tolower toupper
 syn keyword cFunctions calloc free getpagesize malloc mmap munmap
 syn keyword cFunctions asctime ctime gettimeofday gmtime localtime mktime settimeofday time
-syn keyword cFunctions bcmp bcopy bzero index memccpy memchr memcmp memcpy memmove memset rindex strcasecmp strcat strchr strcmp strcoll strcpy strcspn strdup strlen strncasecmp strncat strncpy strpbrk strrchr strspn strstr strtok
+syn keyword cFunctions bcmp bcopy bzero index memccpy memchr memcmp memcpy memmove memset rindex strcasecmp strcat strchr strcmp strcoll strcpy strcspn strdup strlen strncasecmp strncat strncpy strncmp strpbrk strrchr strspn strstr strtok
 syn keyword cFunctions abs acos asin atan atan2 ceil cos cosh exp frexp ldexp log log10 pow sin sinh sqrt tan tanh
 syn keyword cFunctions endgrent endpwent endutent fgetgrent fgetpwent getegid geteuid getgid getgrent getgrgid getgrnam getgroups getpw getpwent getpwnam getpwuid getuid getutent getutid getutline initgroups pututline seteuid setfsgid setfsuid setgid setgrent setgroups setpwent setregid setreuid setuid setutent utmpname
 syn keyword cFunctions crypt bsearch lfind lsearch qsort rand srand
