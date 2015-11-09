@@ -31,6 +31,9 @@ set fdm=indent
 " 设置粘贴模式
 "set paste
 
+" 显示总行数
+set ruler
+
 " map tags list
 map <F3> :TlistToggle<CR>
 
