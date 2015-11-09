@@ -31,8 +31,10 @@ set fdm=indent
 " 设置粘贴模式
 "set paste
 
-" 显示总行数
+" 显示当前行,总行数
 set ruler
+set rulerformat=%25(%5l,%-6(%c%V%)\ %5*%L\ %P%)%*
+
 
 " map tags list
 map <F3> :TlistToggle<CR>
