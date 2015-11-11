@@ -33,4 +33,4 @@ int main(int argc, char *argv[])
     return 0;
 }
 
-/* vi:set ft=c ts=4 sw=4 etc fdm=marker: */
+/* vim:set ft=c ts=4 sw=4 et fdm=marker: */
