@@ -9,6 +9,8 @@ os=$(uname)
 two_months_ago=$((3600 * 24 * 30 * 2))
 current_time=`date +%s`
 
+git fetch -p
+
 all_branch="./all_branch.txt"
 git branch --all | awk '{
     count = split($1, cntr, "/");
