@@ -22,7 +22,7 @@ export LC_ALL=en_US.UTF-8
 alias svn-st='svn st | grep ^M'
 alias svn-log='svn log -v --limit 5'
 
-# pro
+# professional alias
 os=$(uname)
 if [ "Darwin" == $os ]
 then
@@ -53,6 +53,7 @@ alias git-pull='git pull'
 alias git-push='git push'
 alias git-clone='git clone'
 alias git-gm="git status | grep modified"
+
 # alias for gcc
 alias gw='gcc -g -O2 -Wall -fno-strict-aliasing -Wno-deprecated-declarations -D_THREAD_SAFE'
 alias gt='gcc -g -finline-functions -Wall -Winline -pipe'
@@ -80,16 +81,6 @@ export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 
-## color less
-#export PAGER="/usr/bin/less -s"
-#export BROWSER="$PAGER"
-#export LESS_TERMCAP_mb=$'\E[01;34m'
-#export LESS_TERMCAP_md=$'\E[01;34m'
-#export LESS_TERMCAP_me=$'\E[0m'
-#export LESS_TERMCAP_se=$'\E[0m'
-#export LESS_TERMCAP_so=$'\E[01;44;33m'
-#export LESS_TERMCAP_ue=$'\E[0m'
-#export LESS_TERMCAP_us=$'\E[01;33m'
 PAGER='less -X -M'
 export LESS=' -R '
 
@@ -176,6 +167,7 @@ find_git_branch () {
     git_branch=''
 }
 PROMPT_COMMAND="find_git_branch; $PROMPT_COMMAND"
+
 # Here is bash color codes you can use
   black=$'\[\e[1;30m\]'
     red=$'\[\e[1;31m\]'
@@ -188,7 +180,7 @@ magenta=$'\[\e[1;35m\]'
  normal=$'\[\e[m\]'
 
 # for gcc {
-# 服务器端的覆盖技术
+# 服务器端的覆盖技术,交叉编译时请将这些环境变量置空
 LD_LIBRARY_PATH=$HOME/local/lib:/usr/local/lib:/usr/lib
 export LD_LIBRARY_PATH
 
@@ -210,7 +202,6 @@ export LD_RUN_PATH
 #export DYLD_FALLBACK_LIBRARY_PATH
 # end for gcc }
 
-#PS1="\[\033[01;32m\]\[\033[00m\]\[\033[31;40m\]@\[\033[00m\]\[\033[36;40m\]\h\[\033[00m\]:\[\033[35;40m\]\w\[\033[00m\]$yellow\$git_branch$white\$ $normal"
 PS1="${white}[${green}${red}@${cyan}\h${normal}:${magenta}\w${white}]$yellow\$git_branch$white\$ $normal"
 
 # 加入 git  自动补齐
