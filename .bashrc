@@ -27,8 +27,10 @@ os=$(uname)
 if [ "Darwin" == $os ]
 then
     alias ls='ls -G'
+    alias myip="ifconfig | grep 'inet ' | awk '{print \$2}'"
 else
     alias ls='ls --color'
+    alias myip="ifconfig | grep 'inet ' | awk '{split(\$2, ip_cntr, \":\"); print ip_cntr[2];}'"
 fi
 alias ll='ls -l'
 alias la='ls -Aalth'
