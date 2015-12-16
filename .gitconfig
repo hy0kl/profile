@@ -43,6 +43,7 @@
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     lp = log --pretty=oneline --abbrev-commit --graph --decorate
     logns = log --color --name-status
+    logst = log --stat
     gc = grep -n --color -E
     ci = commit
     co = checkout
