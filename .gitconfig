@@ -38,7 +38,6 @@
 [alias]
     sed  = !git ls-files --stage | grep ^100 | awk '{print $4}' | xargs sed $@
     who  = shortlog -n -s --no-merges
-    stat = status
 
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     lp = log --pretty=oneline --abbrev-commit --graph --decorate
@@ -61,7 +60,7 @@
     df = diff
     rv = remote -v
     rso= remote show origin
-    # 清除除在本地有但在远程库中已经不存在的分支
+    # 清除除在本地有但在远程库中已经不存在的分支 git fetch -p
     rpo= remote prune origin
 
     # 'git add -u' 只包含刪除的檔案,不包含新增檔案
