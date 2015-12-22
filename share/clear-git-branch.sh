@@ -1,5 +1,5 @@
 #!/bin/bash
-# @describe:
+# @describe: 清除2个月未更新的腐败分支
 # @author:   Jerry Yang(hy0kle@gmail.com)
 
 #set -x
