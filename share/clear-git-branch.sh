@@ -21,14 +21,7 @@ git branch --all | awk '{
 
 for branch in `cat $all_branch`
 do
-    last_date_str=`git log $branch -1 | awk -F "   " '{if ("Date:" == $1) {split($2, cntr, " "); print cntr[2] " " cntr[3] " " cntr[4] " " cntr[5]}}'`
-    #echo $last_date_str
-    if [ "Darwin" == $os ]
-    then
-        last_time=`date -v "$last_date_str" +%s`
-    else
-        last_time=`date -d"$last_date_str" +%s`
-    fi
+    last_time=`git log --date=raw $branch -1 | awk '{if ("Date:" == $1) {print $2}}'`
     #echo "current_time: "$current_time
     #echo "last_time:    "$last_time
     diff_time=$((current_time - last_time))

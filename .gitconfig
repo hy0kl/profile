@@ -43,6 +43,7 @@
     lp = log --pretty=oneline --abbrev-commit --graph --decorate
     logns = log --color --name-status --date=iso
     logst = log --stat --date=iso
+    ldp= log --date=iso -p
     gc = grep -n --color -E
     ci = commit
     co = checkout
