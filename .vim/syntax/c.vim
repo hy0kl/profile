@@ -291,7 +291,7 @@ syn keyword cFunctions gai_strerror
 syn keyword cFunctions asprintf dprintf vsnprintf vasprintf vdprintf
 syn keyword cFunctions va_start va_arg va_copy va_end
 syn keyword cFunctions gethostname sethostname
-syn keyword cFunctions getopt isatty select ttyname
+syn keyword cFunctions getopt isatty select ttyname ttyslot
 syn keyword cFunctions getaddrinfo freeaddrinfo
 syn keyword cFunctions setlocale
 syn keyword cFunctions sysconf

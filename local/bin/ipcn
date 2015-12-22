@@ -1,0 +1,57 @@
+#!/usr/bin/env php
+<?php
+/**
+ * @describe:
+ * @author: Jerry Yang(hy0kle@gmail.com)
+ * */
+$api = 'http://www.ip.cn/index.php?ip=%s';
+/* vim:set ts=4 sw=4 et fdm=marker: */
+if (! ($argc > 1))
+{
+    echo "no input IP.\nUsage: {$argv[0]} 'IP'\n";
+    exit;
+}
+
+$url = sprintf($api, $argv[1]);
+
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // 以流式返回,而不是直接输出
+
+curl_setopt($ch, CURLOPT_TIMEOUT, $timeout);
+curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout - 10);
+
+$html = curl_exec($ch);
+
+$errno = curl_errno($ch);
+$msg   = curl_error($ch);
+
+if (0 == $errno)
+{
+    $ip_info = 'NOT find';
+    //echo $html;
+    $find = 'id="result">';
+    $pos = strpos($html, $find);
+    if (false !== $pos) {
+        $slice = substr($html, $pos + strlen($find), 1024);
+        $sub_find = '<script';
+        $sub_pos = strpos($slice, $sub_find);
+        if ($sub_pos > 1) {
+            $des_html = substr($slice, 0, $sub_pos - 1);
+            //echo $des_html, PHP_EOL;
+            $des_html = str_replace(
+                array("\r", "\n", '&nbsp;',),
+                array('', '', ' ',),
+                $des_html);
+            $ip_info = strip_tags($des_html);
+        }
+    }
+    echo $ip_info, PHP_EOL;
+}
+else
+{
+    echo "[ERROR] {$errno}: {$msg}" . PHP_EOL;
+}
+
+curl_close($ch);
+
