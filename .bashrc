@@ -96,7 +96,10 @@ export LESS=' -R '
 export SVN_EDITOR=vim
 export EDITOR=vim
 
-export PATH=$HOME/local/bin:/usr/local/mysql/bin:$PATH
+export PATH=/home/work/ndk/android-ndk-r9d:/home/work/arm-linux/arm-linux-androideabi-4.6/bin:$HOME/local/bin:/usr/local/mysql/bin:$PATH:/home/work/android-sdk-linux/tools
+#export NDK=$HOME/ndk/android-ndk-r10e
+export NDK=/home/work/ndk/android-ndk-r9d
+export ANDROID_HOME=/home/work/android-sdk-linux
 
 # 生成随机字符串
 function _randpwd
@@ -209,9 +212,19 @@ export LD_RUN_PATH
 #DYLD_FALLBACK_LIBRARY_PATH=/usr/lib
 #export DYLD_FALLBACK_LIBRARY_PATH
 # end for gcc }
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
 
 #PS1="\[\033[01;32m\]\[\033[00m\]\[\033[31;40m\]@\[\033[00m\]\[\033[36;40m\]\h\[\033[00m\]:\[\033[35;40m\]\w\[\033[00m\]$yellow\$git_branch$white\$ $normal"
-PS1="${white}[${green}${red}@${cyan}\h${normal}:${magenta}\w${white}]$yellow\$git_branch$white\$ $normal"
+PS1="${white}[${green}\u${red}@${cyan}\h${normal}:${magenta}\w${white}]$yellow\$git_branch$white\$ $normal"
 
 # 加入 git  自动补齐
 if [[ -f "$HOME/profile/local/git-completion.bash" ]]; then

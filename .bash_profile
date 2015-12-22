@@ -22,6 +22,5 @@ export PATH=$COCOS_X_ROOT:$PATH
 export ANT_ROOT=/Applications/Cocos/tools/ant/bin
 export PATH=$ANT_ROOT:$PATH
 
-cowsay_file=$(find ~/local/share/cows -type f | awk 'BEGIN{ i = 1; srand(); } {cntr[i] = $0; i++} END{ value = int(rand() * 1000); print cntr[value % (i - 1) + 1];}')
-cowsay -f $cowsay_file 'Hi, it is a new day.'
-
+cowsay_file=$(find /usr/share/cowsay/cows -type f | awk 'BEGIN{ i = 1; srand(); } {cntr[i] = $0; i++} END{ value = int(rand() * 1000); print cntr[value % (i - 1) + 1];}')
+fortune | cowsay -f $cowsay_file
