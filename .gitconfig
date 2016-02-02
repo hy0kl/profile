@@ -28,6 +28,7 @@
 
 [color "diff"]
     meta = magenta black bold
+    whitespace = red reverse
 
 [color "branch"]
     current  = bold green
