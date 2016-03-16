@@ -12,16 +12,23 @@
 
 [difftool]
     prompt  = no
+[diff "odf"]
+    command = odt2txt
+[diff "jpg"]
+    command = exiftool
 
 [color]
      diff   = always
-     status = true
      branch = auto
      interactive = auto
+     grep = auto
+     status = true
+     showbranch = auto
      ui = true
 
 [color "diff"]
     meta = magenta black bold
+    whitespace = red reverse
 
 [color "branch"]
     current  = bold green

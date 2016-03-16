@@ -1,4 +1,5 @@
 Host *
+    #IdentityFile ~/.ssh/%r@%h
 ControlMaster auto
 ControlPath /tmp/%r@%h:%p
 ServerAliveInterval 60
