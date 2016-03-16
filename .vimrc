@@ -154,4 +154,3 @@ let NERDTreeIgnore=['^cscope', '^tags$']
 
 " 通过C-X,C-U打开匹配列表
 "let g:SuerTabDefaultCompletionType = '<C-X><C-U>'
-
