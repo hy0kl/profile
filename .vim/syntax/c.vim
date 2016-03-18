@@ -268,7 +268,7 @@ endif
 " add by hy0kl for hilight c functions #2012.11.29
 syn keyword cFunctions isalnum isalpha isascii iscntrl isdigit isgraphis islower isprint isspace ispunct isupper isxdigit
 syn keyword cFunctions atof atoi atol gcvt strtod strtol strtoul strtoll strtoq strtoimax toascii tolower toupper
-syn keyword cFunctions calloc free getpagesize malloc mmap munmap
+syn keyword cFunctions calloc free getpagesize malloc mmap munmap realloc reallocf valloc
 syn keyword cFunctions asctime ctime gettimeofday gmtime localtime mktime settimeofday time
 syn keyword cFunctions bcmp bcopy bzero index memccpy memchr memcmp memcpy memmove memset rindex strcasecmp strcat strchr strcmp strcoll strcpy strcspn strdup strlen strncasecmp strncat strncpy strncmp strpbrk strrchr strspn strstr strtok
 syn keyword cFunctions abs acos asin atan atan2 ceil cos cosh exp frexp ldexp log log10 pow sin sinh sqrt tan tanh
