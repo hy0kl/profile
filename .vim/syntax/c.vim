@@ -2,7 +2,7 @@
 " Language:	C
 " Maintainer:	Bram Moolenaar <Bram@vim.org>
 " Last Change:	2008 Mar 19
-" Last Revision: by hy0kl #2012.11
+" Last Revision: by hy0kl #2016.03
 
 " Quit when a (custom) syntax file was already loaded
 if exists("b:current_syntax")
@@ -287,6 +287,7 @@ syn keyword cFunctions getsockname
 syn keyword cFunctions getpeername
 syn keyword cFunctions getenv putenv setenv
 syn keyword cFunctions assert
+syn keyword cFunctions mkdir mkdirat
 syn keyword cFunctions gai_strerror
 syn keyword cFunctions asprintf dprintf vsnprintf vasprintf vdprintf
 syn keyword cFunctions va_start va_arg va_copy va_end
