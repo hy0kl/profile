@@ -299,6 +299,7 @@ syn keyword cFunctions getopt isatty select ttyname ttyslot
 syn keyword cFunctions getaddrinfo freeaddrinfo
 syn keyword cFunctions setlocale
 syn keyword cFunctions sysconf
+syn keyword cFunctions epoll_create epoll_create1 epoll_ctl epoll_wait epoll_pwait
 syn keyword cFunctions err verr errc verrc errx verrx warn vwarn warnc vwarnc warnx vwarnx err_set_exit err_set_exit_b err_set_file
 syn keyword cFunctions closelog openlog setlogmask syslog vsyslog
 syn keyword cFunctions strftime strftime_l
