@@ -289,6 +289,7 @@ syn keyword cFunctions getsockname
 syn keyword cFunctions getpeername
 syn keyword cFunctions getenv putenv setenv
 syn keyword cFunctions assert
+syn keyword cFunctions ioctl cdio chio intro
 syn keyword cFunctions mkdir mkdirat
 syn keyword cFunctions gai_strerror
 syn keyword cFunctions asprintf dprintf vsnprintf vasprintf vdprintf
