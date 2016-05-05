@@ -3,8 +3,6 @@
 --exclude=log
 --exclude=tmp
 
---langdef=lua
---langmap=lua:.lua
 --regex-LUA=/^.*\s*function[ \t]*([a-zA-Z0-9_]+):([a-zA-Z0-9_]+).*$/\2/f,function/
 --regex-LUA=/^.*\s*function[ \t]*([a-zA-Z0-9_]+)\.([a-zA-Z0-9_]+).*$/\2/f,function/
 --regex-LUA=/^.*\s*function[ \t]*([a-zA-Z0-9_]+)\s*\(.*$/\1/f,function/
