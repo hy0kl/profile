@@ -1,12 +1,12 @@
 profile
 =======
 
-My profile for work.
+高级智能化工作环境
 
 # [Dependence]
 
 * [ctags](http://ctags.sourceforge.net/)
-* [tree](ftp://mama.indstate.edu/linux/tree/)
+* [tree](ftp://mama.indstate.edu/linux/tree/) ftp://mama.indstate.edu/linux/tree/
 
 ## Ubuntu
 
