@@ -11,7 +11,7 @@ profile
 - 超强vim配置
   - nginx配置文件高亮
   - c/c++海量API高亮
-  - php/js/css/pthon/c系统函数自动补全
+  - php/js/css/python/c系统函数自动补全
 - N多实用别名和参考脚本
 
 # [Dependence]
