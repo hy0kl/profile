@@ -230,3 +230,5 @@ if [[ -f "$HOME/profile/local/git-completion.bash" ]]; then
     source $HOME/profile/local/git-completion.bash
 fi
 
+# 设置文件系统掩码,某些系统初始化后掩码有问题,统一设置为合理值
+umask 0022
