@@ -13,3 +13,11 @@ My profile for work.
 ```
 $ sudo apt-get install ctags tree vim
 ```
+
+# 安装方法
+
+```
+$ git clone git@github.com:hy0kl/profile.git
+$ cd profile
+$ ./install.sh
+```
