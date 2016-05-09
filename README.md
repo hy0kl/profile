@@ -12,7 +12,10 @@ profile
   - nginx配置文件高亮
   - c/c++海量API高亮
   - php/js/css/python/c系统函数自动补全
+  - VIDE,将vim当做IDE工具
 - N多实用别名和参考脚本
+- 彩色的man手册
+- 自动识git分支
 
 # [Dependence]
 

@@ -44,6 +44,8 @@ alias rscp='rsync -v -P -e ssh'
 alias wget='wget -c'
 alias sendmail='$HOME/local/sendEmail/sendEmail -f cli_mail@163.com -o message-content-type=auto -o message-charset=utf-8 -s smtp.163.com -xu cli_mail@163.com -xp Iwi11ct0'
 alias mysql='mysql --auto-rehash'
+alias ctagsp='ctags -R --langmap=PHP:.php.inc --php-types=c+f+d --exclude=.svn --exclude=svn --exclude=subversion --exclude=img  --exclude=swf --exclude=js --exclude=tpl --exclude=htdocs --exclude=html --exclude=sql --exclude=static --exclude=.git'
+alias vi='vim'
 
 # alias for git
 alias git-ci='git commit'
@@ -89,10 +91,10 @@ export LESS=' -R '
 export SVN_EDITOR=vim
 export EDITOR=vim
 
-export PATH=/home/work/ndk/android-ndk-r9d:/home/work/arm-linux/arm-linux-androideabi-4.6/bin:$HOME/local/bin:/usr/local/mysql/bin:$PATH:/home/work/android-sdk-linux/tools
-#export NDK=$HOME/ndk/android-ndk-r10e
-export NDK=/home/work/ndk/android-ndk-r9d
-export ANDROID_HOME=/home/work/android-sdk-linux
+export PATH=$HOME/local/bin:/usr/local/mysql/bin:$PATH
+
+# 使用 HISTTIMEFORMAT 在历史中显示 TIMESTAMP
+export HISTTIMEFORMAT='%F %T '
 
 # 生成随机字符串
 function _randpwd
