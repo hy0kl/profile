@@ -24,7 +24,7 @@ alias svn-log='svn log -v --limit 5'
 
 # professional alias
 os=$(uname)
-if [ "Darwin" == $os || "FreeBSD" == $os ]
+if [[ "Darwin" == $os ]] || [[ "FreeBSD" == $os ]]
 then
     alias ls='ls -G'
     alias myip="ifconfig | grep 'inet ' | awk '{print \$2}'"
