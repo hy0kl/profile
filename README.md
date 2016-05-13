@@ -43,7 +43,7 @@ $ sudo apt-get install ctags tree vim
 
 ```
 # yum install ctags tree vim
-``
+```
 
 # 安装方法
 
