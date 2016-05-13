@@ -11,11 +11,14 @@ profile
 - 超强vim配置
   - nginx配置文件高亮
   - c/c++海量API高亮
+  - awk脚本语法高亮
   - php/js/css/python/c系统函数自动补全
-  - VIDE,将vim当做IDE工具
+  - 记忆文件最后编辑位置
+  - VI(M)DE,将vim当做IDE工具
 - N多实用别名和参考脚本
 - 彩色的man手册
 - 自动识git分支
+- 个性化登陆欢迎界面(需要安装`fortune`,`cowsay`)
 
 # [Dependence]
 
@@ -28,10 +31,26 @@ profile
 $ sudo apt-get install ctags tree vim
 ```
 
+## BSD
+
+```
+# pkg install ctags
+# pkg install tree
+# pkg install vim
+```
+
+## CentOS
+
+```
+# yum install ctags tree vim
+``
+
 # 安装方法
 
 ```
-$ git clone git@github.com:hy0kl/profile.git
+$ cd ~
+$ git clone https://github.com/hy0kl/profile.git    # https协议,防止抛ssh-key无权限
 $ cd profile
 $ ./install.sh
 ```
+
