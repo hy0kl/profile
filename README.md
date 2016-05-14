@@ -34,9 +34,7 @@ $ sudo apt-get install ctags tree vim
 ## BSD
 
 ```
-# pkg install ctags
-# pkg install tree
-# pkg install vim
+# pkg install ctags tree vim
 ```
 
 ## CentOS
