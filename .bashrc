@@ -218,6 +218,8 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+[[ $PS1 && -f /usr/local/share/bash-completion/bash_completion.sh ]] && \
+    source /usr/local/share/bash-completion/bash_completion.sh
 
 prompt='\$'
 if [ "root" = "$USER" ]
