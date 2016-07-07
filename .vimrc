@@ -79,6 +79,13 @@ function AddJsFuncList()
 endfunction
 autocmd FileType javascript call AddJsFuncList()
 
+" sql 关键词补全
+function AddSqlKeyword()
+    set dictionary-=~/.vim/tools/sql.dict dictionary+=~/.vim/tools/sql.dict
+    set complete-=k complete+=k
+endfunction
+autocmd FileType sql call AddSqlKeyword()
+
 "colorscheme darkblue
 
 " 记住上次编辑的位置
