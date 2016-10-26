@@ -12,7 +12,7 @@ profile
   - nginx配置文件高亮
   - c/c++海量API高亮
   - awk脚本语法高亮
-  - php/js/css/python/c系统函数自动补全
+  - php/js/css/python/c系统函数/sql关键词自动补全
   - 记忆文件最后编辑位置
   - VI(M)DE,将vim当做IDE工具
 - N多实用别名和参考脚本
