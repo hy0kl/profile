@@ -19,3 +19,6 @@ au BufRead,BufNewFile *.rs set filetype=rust
 
 " rust 项目toml配置文件高亮
 au BufRead,BufNewFile *.toml set filetype=toml
+
+" vue
+au BufRead,BufNewFile *.vue set filetype=html
