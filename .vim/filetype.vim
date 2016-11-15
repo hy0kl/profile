@@ -22,3 +22,6 @@ au BufRead,BufNewFile *.toml set filetype=toml
 
 " vue
 au BufRead,BufNewFile *.vue set filetype=html
+
+" swift
+au BufRead,BufNewFile *.swift set filetype=swift
