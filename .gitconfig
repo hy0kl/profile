@@ -97,7 +97,9 @@
     vdf = difftool
 
     # 临时保存
-    ss = stash
+    ss = stash save
+    sp = stash pop
+    sl = stash list
 
 [core]
     # 对 0x80以上的字符不进行quote,以正常显示中文
