@@ -44,13 +44,15 @@
 
 [alias]
     sed  = !git ls-files --stage | grep ^100 | awk '{print $4}' | xargs sed $@
-    who  = shortlog -n -s --no-merges
 
-    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-    lp = log --pretty=oneline --abbrev-commit --graph --decorate
-    logns = log --color --name-status --date=iso
-    logst = log --stat --date=iso
-    ldp= log --date=iso -p
+    # 日志操作简化
+    who = shortlog -n -s --no-merges
+    lg  = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    lp  = log --color --pretty=oneline --abbrev-commit --graph --decorate
+    lns = log --color --name-status --date=iso
+    lst = log --color --stat --date=iso
+    ldp = log --color --date=iso -p
+
     gc = grep -n --color -E
     ci = commit
     co = checkout
@@ -61,15 +63,21 @@
     bm = branch -m
     bd = branch -d
     bc = checkout -b
+    cb = checkout -b
     rt = reset --hard
     cp = cherry-pick -x
     nb = checkout -b
     mg = merge
     df = diff
     rv = remote -v
-    rso= remote show origin
+    fa = fetch --all
+    # 最后一次提交的 hash 串
+    lh = rev-parse HEAD
+    # 刻意地创造提交线图分叉
+    mnf = merge --no-ff
+    rso = remote show origin
     # 清除除在本地有但在远程库中已经不存在的分支 git fetch -p
-    rpo= remote prune origin
+    rpo = remote prune origin
 
     # 'git add -u' 只包含刪除的檔案,不包含新增檔案
     # 'git add .' 包含修改和新增的檔案,但是不包含刪除
