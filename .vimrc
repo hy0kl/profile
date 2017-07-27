@@ -123,8 +123,8 @@ highlight Pmenu ctermbg=magenta
 "highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 "match OverLength /\%81v.\+/
 
-"仅检测PHP语法
-autocmd FileType php map <F2> :!~/php/bin/php -l %<cr>
+" 仅检测PHP语法
+autocmd FileType php map <F2> :!/usr/bin/env php -l %<cr>
 
 " 友好注释助手
 let g:DoxygenToolkit_paramTag_pre="@param: "
