@@ -5,8 +5,8 @@
 
 #set -x
 
-# 生成 1024 位的私钥
-openssl genrsa -out rsa_private_key.pem 1024
+# 生成 2048 位的私钥
+openssl genrsa -out rsa_private_key.pem 2048
 # 转成 pkcs8 格式
 openssl pkcs8 -topk8 -inform PEM -in rsa_private_key.pem -outform PEM -nocrypt
 # 生成 rsa 公钥
