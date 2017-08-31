@@ -51,6 +51,7 @@
     lp  = log --color --pretty=oneline --abbrev-commit --graph --decorate
     lns = log --color --name-status --date=iso
     lst = log --color --stat --date=iso
+    ldi = log --color --date=iso
     ldp = log --color --date=iso -p
     # 最新一条 commit log 摘要
     l1  = !git --no-pager log --max-count=1 --date=iso
