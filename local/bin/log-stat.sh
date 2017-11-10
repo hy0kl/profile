@@ -3,8 +3,10 @@
 # @author:   Jerry Yang(hy0kle@gmail.com)
 
 #set -x
+#set -eu
 num=10
-if [ $# > 1 ]
+argc=$#
+if ((argc > 0))
 then
     num=$1
 fi
