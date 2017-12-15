@@ -12,7 +12,7 @@ profile
   - nginx配置文件高亮
   - c/c++海量API高亮
   - awk脚本语法高亮
-  - php/js/css/python/c系统函数/sql关键词自动补全
+  - php/js/css/python/c系统函数/sql关键词/golang/rust自动补全
   - 记忆文件最后编辑位置
   - VI(M)DE,将vim当做IDE工具
 - N多实用别名和参考脚本
@@ -45,9 +45,22 @@ $ sudo apt-get install ctags tree vim
 
 # 安装方法
 
+## 方法一: 分步初始化
+
 ```
 $ cd ~
 $ git clone https://github.com/hy0kl/profile.git    # https协议,防止抛ssh-key无权限
+$ cd profile
+$ git submodule init
+$ git submodule update
+$ ./install.sh
+```
+
+## 方法二: 使用递归命令初始化
+
+```
+$ cd ~
+$ git clone --recursive https://github.com/hy0kl/profile.git    # https协议,防止抛ssh-key无权限
 $ cd profile
 $ ./install.sh
 ```

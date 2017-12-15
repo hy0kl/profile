@@ -26,6 +26,7 @@
 *.swp
 *.swo
 *.dSYM
+*.bak
 
 # IDE project
 *.project
