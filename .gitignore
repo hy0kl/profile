@@ -37,6 +37,7 @@ a.out
 tags
 favicon.ico
 .netrwhist
+*.bak
 
 # Xcode
 ## gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
