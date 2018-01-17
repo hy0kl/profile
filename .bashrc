@@ -39,12 +39,15 @@ alias lt='ls -lth'
 alias tf='tail -f'
 alias grep='grep --color=always'
 alias tree='tree -C'
+alias vih='sudo vim /etc/hosts'
 alias cdiff='~/local/colordiff/colordiff.pl | less -R'
 alias rscp='rsync -v -P -e ssh'
 alias wget='wget -c'
 alias sendmail='$HOME/local/sendEmail/sendEmail -f cli_mail@163.com -o message-content-type=auto -o message-charset=utf-8 -s smtp.163.com -xu cli_mail@163.com -xp Iwi11ct0'
 alias mysql='mysql --auto-rehash'
 alias ctagsp='ctags -R --langmap=PHP:.php.inc --php-types=c+f+d --exclude=.svn --exclude=svn --exclude=subversion --exclude=img  --exclude=swf --exclude=js --exclude=tpl --exclude=htdocs --exclude=html --exclude=sql --exclude=static --exclude=.git'
+# tail -f 目录下所有文件
+alias tailaf='find . -type f | xargs tail -f'
 alias vi='vim'
 
 # alias for git
@@ -96,8 +99,9 @@ export PATH=$HOME/local/bin:/usr/local/mysql/bin:$PATH
 # 使用 HISTTIMEFORMAT 在历史中显示 TIMESTAMP
 export HISTTIMEFORMAT='%F %T '
 
+
 # 生成随机字符串
-function _randpwd
+function _randpwd()
 {
     str=`date +%s | shasum | base64 | head -c 16`
     echo $str
