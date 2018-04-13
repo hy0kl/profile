@@ -179,11 +179,15 @@ find_git_branch () {
 }
 PROMPT_COMMAND="find_git_branch; $PROMPT_COMMAND"
 
-# 目前仅于linux
 # 日期转uninx时间戳毫秒
 function _dt2um() {
     local args=$*
-    um=`date +%s -d "$args"`
+    if [[ "Darwin" == $os ]] || [[ "FreeBSD" == $os ]]
+    then
+        um=`date -j -f "%Y-%m-%d %H:%M:%S" "$args" "+%s"`
+    else
+        um=`date +%s -d "$args"`
+    fi
     um=$((um * 1000))
     echo $um
 }
@@ -193,7 +197,12 @@ alias dt2um=_dt2um
 function _um2dt() {
     local um=$1
     um=$((um / 1000))
-    echo `date -d @"$um" +"%Y-%m-%d %H:%M:%S"`
+    if [[ "Darwin" == $os ]] || [[ "FreeBSD" == $os ]]
+    then
+        echo `date -r "$um" +"%Y-%m-%d %H:%M:%S"`
+    else
+        echo `date -d @"$um" +"%Y-%m-%d %H:%M:%S"`
+    fi
 }
 alias um2dt=_um2dt
 
