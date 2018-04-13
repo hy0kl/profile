@@ -179,6 +179,24 @@ find_git_branch () {
 }
 PROMPT_COMMAND="find_git_branch; $PROMPT_COMMAND"
 
+# 目前仅于linux
+# 日期转uninx时间戳毫秒
+function _dt2um() {
+    local args=$*
+    um=`date +%s -d "$args"`
+    um=$((um * 1000))
+    echo $um
+}
+alias dt2um=_dt2um
+
+# uninx时间戳毫秒转日期
+function _um2dt() {
+    local um=$1
+    um=$((um / 1000))
+    echo `date -d @"$um" +"%Y-%m-%d %H:%M:%S"`
+}
+alias um2dt=_um2dt
+
 # Here is bash color codes you can use
   black=$'\[\e[1;30m\]'
     red=$'\[\e[1;31m\]'
