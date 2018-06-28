@@ -152,6 +152,18 @@ function _urldecode()
 }
 alias urldecode=_urldecode
 
+function _md2word()
+{
+    PANDOC_INSTALLED=$(pandoc --version >> /dev/null; echo $?)
+
+    if [ "0" == ${PANDOC_INSTALLED} ]; then
+        pandoc -o $2 -f markdown -t docx $1
+    else
+        echo "Pandoc is not installed. Unable to convert document."
+    fi
+}
+alias md2word=_md2word
+
 function _kgit()
 {
     ps axu | grep git | grep -v grep | awk '{print $2}' | xargs kill -9
