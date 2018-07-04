@@ -159,6 +159,9 @@ imap <F9> <ESC>:NERDTreeToggle<CR>
 "autocmd VimEnter * NERDTree
 let NERDTreeIgnore=['^cscope', '^tags$']
 
+" golang 结构体补齐
+"imap <C-Space> <C-x><C-o>
+
 " 通过C-X,C-U打开匹配列表
 "let g:SuerTabDefaultCompletionType = '<C-X><C-U>'
 
@@ -176,3 +179,4 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 filetype plugin on
 
+Bundle 'Blackrush/vim-gocode'
