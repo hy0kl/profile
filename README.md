@@ -66,3 +66,12 @@ $ ./install.sh
 ```
 
 记得将`~/.gitconfig`中的`name`,`email`改成自己的,否则提交日志中会出现默认的
+
+# golangIDE依赖
+
+```
+gocode
+goimports
+gotags
+godef
+```
