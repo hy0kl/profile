@@ -167,6 +167,7 @@ alias md2word=_md2word
 function _kgit()
 {
     ps axu | grep git | grep -v grep | awk '{print $2}' | xargs kill -9
+    exit 0
 }
 alias kgit=_kgit
 
