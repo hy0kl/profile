@@ -70,8 +70,8 @@ $ ./install.sh
 # golangIDE依赖
 
 ```
-gocode
-goimports
-gotags
-godef
+gocode      go get github.com/nsf/gocode
+goimports   go get golang.org/x/tools/cmd/goimports
+gotags      go get github.com/jstemmer/gotags
+godef       go get github.com/rogpeppe/godef
 ```
