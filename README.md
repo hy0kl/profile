@@ -74,4 +74,15 @@ gocode      go get github.com/nsf/gocode
 goimports   go get golang.org/x/tools/cmd/goimports
 gotags      go get github.com/jstemmer/gotags
 godef       go get github.com/rogpeppe/godef
+...
 ```
+
+## 新环境的配置
+
+执行以下命令
+
+```
+:PluginInstall
+:GoUpdateBinaries
+```
+
