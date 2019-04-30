@@ -230,29 +230,6 @@ magenta=$'\[\e[1;35m\]'
   white=$'\[\e[1;37m\]'
  normal=$'\[\e[m\]'
 
-# for gcc {
-# 服务器端的覆盖技术,交叉编译时请将这些环境变量置空
-LD_LIBRARY_PATH=$HOME/local/lib:/usr/local/lib:/usr/lib
-export LD_LIBRARY_PATH
-
-C_INCLUDE_PATH=$HOME/local/include:/usr/local/include:/usr/include
-export C_INCLUDE_PATH
-
-LIBRARY_PATH=$HOME/local/lib:/usr/local/lib:/usr/lib
-export LIBRARY_PATH
-
-LD_RUN_PATH=$HOME/local/bin:/usr/local/bin:/usr/bin:/usr/sbin:/sbin
-export LD_RUN_PATH
-
-# 在 mac 容易出问题，尤其在 jpeg/png 的多版本情况下
-#DYLD_LIBRARY_PATH=$HOME/local/lib:/usr/local/mysql/lib
-#export DYLD_LIBRARY_PATH
-
-# 去掉一些旧的支持
-#DYLD_FALLBACK_LIBRARY_PATH=/usr/lib
-#export DYLD_FALLBACK_LIBRARY_PATH
-# end for gcc }
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).

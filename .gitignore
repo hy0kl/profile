@@ -95,6 +95,7 @@ Carthage/Build
 .factorypath
 .gradle
 .idea
+.mvn
 .metadata
 .project
 .recommenders
