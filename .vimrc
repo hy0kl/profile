@@ -162,6 +162,9 @@ let NERDTreeIgnore=['^cscope', '^tags$']
 " golang 结构体补齐
 "imap <C-Space> <C-x><C-o>
 
+" go import 自动导入
+let g:go_fmt_command = "goimports"
+
 " 通过C-X,C-U打开匹配列表
 "let g:SuerTabDefaultCompletionType = '<C-X><C-U>'
 
