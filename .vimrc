@@ -182,4 +182,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 filetype plugin on
 
+" yaml
+Plugin 'stephpy/vim-yaml'
+
 Bundle 'Blackrush/vim-gocode'

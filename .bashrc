@@ -256,5 +256,70 @@ if [[ -f "$HOME/profile/local/git-completion.bash" ]]; then
     source $HOME/profile/local/git-completion.bash
 fi
 
+function _push_all() {
+    branch=$(git remote -v | awk '{print $1}' | sort -u)
+    for bc in $branch
+    do
+        echo "git push $bc master"
+        git push $bc master
+    done
+}
+alias push-all=_push_all
+
+export ESHOST="http://127.0.0.1:9200"
+
+function es_idx_info() {
+    if [ $# -lt 1 ]; then
+        echo "usage: es-idx-info index-name"
+    else
+        local idx=$1
+        curl -H "Content-Type:application/json" -XGET $ESHOST/$idx/_settings?pretty
+    fi
+}
+alias es-idx-info=es_idx_info
+
+function es_idx_map() {
+    if [ $# -lt 1 ]; then
+        echo "usage: es-idx-map index-name"
+    else
+        local idx=$1
+        curl -H "Content-Type:application/json" -XGET $ESHOST/$idx/_mapping?pretty
+    fi
+}
+alias es-idx-map=es_idx_map
+
+function es_idx_alias() {
+    if [ $# -lt 1 ]; then
+        echo "usage: es-idx-alias index-name"
+    else
+        local idx=$1
+        curl -H "Content-Type:application/json" -XGET $ESHOST/$idx/_alias/*?pretty
+    fi
+}
+alias es-idx-alias=es_idx_alias
+
+function es_alias_idx() {
+    if [ $# -lt 1 ]; then
+        echo "usage: es-alias-idx alias-name"
+    else
+        local name=$1
+        curl -H "Content-Type:application/json" -XGET $ESHOST/*/_alias/$name?pretty
+    fi
+}
+alias es-alias-idx=es_alias_idx
+
+function es_del_idx() {
+    if [ $# -lt 1 ]; then
+        echo "usage: es-del-idx index-name"
+    else
+        local idx=$1
+        curl -XDELETE $ESHOST/$idx?pretty
+    fi
+}
+alias es-del-idx=es_del_idx
+alias es-idxs="curl $ESHOST/_cat/indices?v"
+alias es-as="curl $ESHOST/_cat/aliases?v"
+alias esc='curl -H "Content-Type:application/json"'
+
 # 设置文件系统掩码,某些系统初始化后掩码有问题,统一设置为合理值
 umask 0022
