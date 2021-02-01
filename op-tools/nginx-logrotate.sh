@@ -29,13 +29,12 @@ for log in $all_logs; do
     rotate_name="$dest_path/$log_name.$date_str"
     mv "$log" "$rotate_name"
 done
-
+sudo $nginx_prefix/sbin/nginx -s reopen
 echo "[`date +"%Y-%m-%d %H:%M:%S %Z"`] rotate finish"
 
 keep_days=7
 cd $dest_base_path && find ./ -type f -mtime +$keep_days -exec rm {} \;
 echo "[`date +"%Y-%m-%d %H:%M:%S %Z"`] delete data older than $keep_days days"
 
-sudo $nginx_prefix/sbin/nginx -s reopen
 # vim:set ts=4 sw=4 et fdm=marker:
 
