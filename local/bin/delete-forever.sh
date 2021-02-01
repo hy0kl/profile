@@ -27,11 +27,11 @@ shift 0
 args=$*
 
 git filter-branch --index-filter "git rm -rf --cached --ignore-unmatch $args" HEAD && \
-rm -rf .git/refs/original/ && \
-git reflog expire --all && \
-git gc --aggressive --prune && \
-git filter-branch --prune-empty && \
-rm -rf .git/refs/original/
+    rm -rf .git/refs/original/ && \
+    git reflog expire --all && \
+    git gc --aggressive --prune && \
+    git filter-branch --prune-empty && \
+    rm -rf .git/refs/original/
 
 if [ 0 == $? ]
 then
@@ -39,5 +39,6 @@ then
 else
     echo "${red}delete files forever fail!${normal}"
 fi
+
 # vim:set ts=4 sw=4 et fdm=marker:
 
