@@ -5,7 +5,7 @@
 set -e
 
 function usage() {
-    echo "$0 base|go|mysql|redis|all"
+    echo "$0 base|nginx|go|mysql|redis|all"
     echo ""
     echo "base: dependence,supervisor"
     exit 1
@@ -27,8 +27,9 @@ function init_base () {
     sudo apt upgrade
     sudo apt autoremove
 
-    sudo apt install -y make gcc libpcre3-dev libssl-dev zlib1g-dev zlib1g-dev libxslt1-dev silversearcher-ag mercurial jq git
-    sudo apt install -y tree ctags
+    sudo apt install -y make gcc libpcre3-dev libssl-dev zlib1g-dev zlib1g-dev libxslt1-dev \
+        silversearcher-ag mercurial jq git \
+        tree ctags vim
 
     if [ $? != 0 ]
     then
@@ -37,9 +38,9 @@ function init_base () {
     fi
 
     cd "$top_dir" && \
-    mkdir -p var \
-        data/backup data/sql data/db-backup \
-        logs/crontab
+        mkdir -p var \
+            data/backup data/sql data/db-backup \
+            logs/crontab
 
     sudo apt -y install supervisor
     if [ $? != 0 ]
