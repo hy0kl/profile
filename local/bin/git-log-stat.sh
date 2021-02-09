@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# @describe: 统计 git log 常用短语排行榜
+# @describe: git log 常用语排行榜
 # @author:   Jerry Yang(hy0kle@gmail.com)
 
 #set -x
