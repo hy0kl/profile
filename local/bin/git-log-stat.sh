@@ -1,13 +1,11 @@
 #!/usr/bin/env bash
-# @describe: log常用短语排行榜
+# @describe: 统计 git log 常用短语排行榜
 # @author:   Jerry Yang(hy0kle@gmail.com)
 
 #set -x
 #set -eu
 num=10
-argc=$#
-if ((argc > 0))
-then
+if [ $# -gt 0 ] && [ "$1" -gt 0 ] 2>/dev/null; then
     num=$1
 fi
 
