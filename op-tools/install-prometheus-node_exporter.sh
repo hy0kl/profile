@@ -3,8 +3,13 @@
 
 #set -x
 
-pid=`ps aux | grep node_exporter | grep -v grep | awk '{print $2}'`
-if [ ! -z "$pid" ]; then
+#pid=`ps aux | grep node_exporter | grep -v grep | awk '{print $2}'`
+#if [ ! -z "$pid" ]; then
+#    echo "node_exporter already installed"
+#    exit 0
+#fi
+
+if [ -x "/home/service/node_exporter/node_exporter" ]; then
     echo "node_exporter already installed"
     exit 0
 fi
@@ -17,7 +22,7 @@ sudo useradd -g prometheus -s /sbin/nologin prometheus
 sudo mkdir -p /home/service
 mkdir -p /tmp/src && cd /tmp/src
 wget https://github.com/prometheus/node_exporter/releases/download/v1.1.1/node_exporter-1.1.1.linux-amd64.tar.gz
-tar -xf node_exporter-1.1.1.linux-amd64.tar.gz -C /home/service
+tar -xvf node_exporter-1.1.1.linux-amd64.tar.gz -C /home/service
 sudo mv /home/service/node_exporter-1.1.1.linux-amd64  /home/service/node_exporter
 
 #### setup autostart ####
