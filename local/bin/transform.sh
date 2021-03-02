@@ -13,7 +13,7 @@
 # ctrl + v ctrl + m
 
 #set -x
-work_path="/Users/hy0kl/nginx/svn-work/trunk"
+work_path=""
 
 if [ "$#" -lt 1 ] || [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
     echo "Usage: $0 \"ABS_PATH\"" >&2
@@ -58,3 +58,4 @@ done
 
 rm -rf tmp
 echo "transfer file jobs done."
+
